@@ -1,0 +1,592 @@
+# Portfolio Website Prompt (Next.js)
+
+## Role
+
+You are an expert Senior Frontend Engineer, UI/UX Designer, and Next.js Developer. Your task is to build a modern, premium-quality, highly interactive developer portfolio that looks unique and memorable. The design should feel like a product website rather than a simple portfolio.
+
+---
+
+# Tech Stack
+
+* Next.js (Latest App Router)
+* TypeScript
+* Tailwind CSS
+* Framer Motion
+* GSAP (where required)
+* Three.js / React Three Fiber (for interactive background)
+* Shadcn UI
+* Lucide Icons
+* EmailJS or Formspree for contact form
+* Vercel optimized
+* Responsive Design
+* SEO Optimized
+
+---
+
+# Theme
+
+The website must support:
+
+✅ Dark Mode by default
+
+Also include
+
+* Light Mode Toggle
+* Smooth Theme Transition
+* Glassmorphism
+* Modern Blur Effects
+* Beautiful Shadows
+* Gradient Accents
+
+Overall feel should be:
+
+Apple + Linear + Vercel + Stripe + Modern AI Website
+
+---
+
+# Landing Hero Section
+
+Create a stunning landing page with:
+
+* Animated Name
+* Short Introduction
+* Professional Tagline
+* CTA Buttons
+* Resume Download Button
+* Contact Button
+* Scroll Indicator
+* Floating Tech Icons
+* Animated Background
+* Mouse Follow Effects
+* Typing Animation
+* Smooth Fade Animations
+
+Include social icons:
+
+* LinkedIn
+* GitHub
+* LeetCode
+* Email
+
+---
+
+# About Section
+
+Include:
+
+* Professional Photo
+* Short Bio
+* Journey
+* Education Timeline
+* Career Goal
+* Skills Summary
+* Animated Statistics
+
+Example cards:
+
+* Projects Completed
+* Technologies
+* Experience
+* Certifications
+
+Add:
+
+* Animated Timeline
+* Hover Effects
+* Smooth Card Animations
+
+---
+
+# Skills Section
+
+Create beautiful categorized skill cards.
+
+Frontend
+
+* HTML
+* CSS
+* JavaScript
+* TypeScript
+* React
+* Next.js
+* Tailwind CSS
+
+Backend
+
+* Node.js
+* Express.js
+* FastAPI
+
+Database
+
+* MongoDB
+* PostgreSQL
+* MySQL
+
+AI / ML
+
+* Python
+* Scikit-learn
+* TensorFlow
+* LangChain
+* LangGraph
+* RAG
+* OpenAI
+* Hugging Face
+
+Tools
+
+* Git
+* GitHub
+* Docker
+* VS Code
+* Postman
+* Linux
+
+Each skill should have
+
+* Icon
+* Progress Animation
+* Hover Animation
+
+---
+
+# Projects Section
+
+Create premium project cards.
+
+Each project should include:
+
+* Large Project Image
+* Project Name
+* Description
+* Tech Stack
+* GitHub Button
+* Live Demo Button
+* Features
+* Status Badge
+
+On hover
+
+* 3D Tilt
+* Glow Effect
+* Image Zoom
+* Smooth Animation
+
+Project popup/modal should show
+
+* Multiple Screenshots
+* Complete Details
+* Challenges
+* Learnings
+* Architecture Diagram Placeholder
+
+---
+
+# Certifications Section
+
+Display certifications as premium cards.
+
+Each card should contain
+
+* Certificate Image
+* Title
+* Organization
+* Date
+* Verify Button
+
+Hover Effects
+
+* Floating
+* Shine Animation
+* Scale Effect
+
+---
+
+# Experience Section
+
+Timeline Design
+
+Include
+
+* Company
+* Position
+* Duration
+* Work Done
+* Skills Used
+
+Animated timeline while scrolling.
+
+---
+
+# Library / Resources Section
+
+Create a section named
+
+"My Knowledge Library"
+
+Display
+
+Books
+
+Courses
+
+Documentation
+
+Research Papers
+
+Blogs
+
+Videos
+
+Favorite Tools
+
+Each card should have
+
+* Cover Image
+* Category
+* Link
+* Rating
+* Short Review
+
+---
+
+# LeetCode Section
+
+Show
+
+* Total Problems
+* Easy
+* Medium
+* Hard
+* Contest Rating
+* Heatmap Placeholder
+* Profile Button
+
+Beautiful dashboard UI.
+
+---
+
+# GitHub Section
+
+Display
+
+* GitHub Stats Placeholder
+* Contribution Graph Placeholder
+* Top Languages
+* Recent Projects
+* Followers
+* Stars
+
+Animated cards.
+
+---
+
+# Contact Section
+
+Include
+
+Professional Contact Form
+
+Fields
+
+* Name
+* Email
+* Subject
+* Message
+
+Buttons
+
+* Send Message
+
+Also show
+
+Email
+
+Phone
+
+Location
+
+LinkedIn
+
+GitHub
+
+LeetCode
+
+Add interactive map placeholder.
+
+---
+
+# Footer
+
+Include
+
+* Logo
+* Social Links
+* Quick Navigation
+* Copyright
+* Back To Top Button
+
+---
+
+# Animations
+
+Implement
+
+* Page Transition
+* Scroll Reveal
+* Text Reveal
+* Floating Animation
+* Card Tilt
+* Smooth Hover
+* Button Ripple
+* Cursor Glow
+* Gradient Animation
+* Loading Animation
+* Skeleton Loading
+* Section Fade
+* Image Reveal
+
+Use Framer Motion extensively.
+
+---
+
+# Performance
+
+Follow
+
+* Lazy Loading
+* Image Optimization
+* SEO
+* Accessibility
+* Lighthouse Score 95+
+* Responsive on Mobile/Tablet/Desktop
+
+---
+
+# Folder Structure
+
+Use clean production-level folder structure.
+
+app/
+
+components/
+
+sections/
+
+hooks/
+
+lib/
+
+public/
+
+styles/
+
+types/
+
+utils/
+
+constants/
+
+data/
+
+assets/
+
+---
+
+# Code Quality
+
+Follow
+
+* Reusable Components
+* Clean Architecture
+* TypeScript Types
+* Proper Comments
+* Modular Code
+* Best Practices
+
+---
+
+# Bonus Features (Innovative)
+
+## 1. AI Portfolio Assistant 🤖
+
+Create an AI chatbot that can answer questions like:
+
+* Tell me about Amit.
+* Show AI projects.
+* Show backend experience.
+* What technologies does he know?
+* Contact details.
+
+---
+
+## 2. Command Palette
+
+Press Ctrl + K
+
+Open command menu.
+
+Commands like
+
+Go to Projects
+
+Go to About
+
+Switch Theme
+
+Download Resume
+
+Open GitHub
+
+Open LinkedIn
+
+Open LeetCode
+
+---
+
+## 3. Interactive Tech Galaxy
+
+Display technologies as floating planets around the center.
+
+Hover to view details.
+
+Click to open skill information.
+
+---
+
+## 4. Project Showcase in 3D
+
+Projects displayed as rotating 3D cards.
+
+---
+
+## 5. Achievement Counter
+
+Animated numbers.
+
+---
+
+## 6. Visitor Counter
+
+Show total visitors.
+
+---
+
+## 7. Music Toggle
+
+Background ambient music.
+
+User can enable/disable.
+
+---
+
+## 8. Hidden Easter Eggs
+
+Examples
+
+Konami Code
+
+Double Click Avatar
+
+Typing "hello"
+
+Shows fun animations.
+
+---
+
+## 9. Terminal Portfolio
+
+A fake terminal where users can type commands:
+
+help
+
+about
+
+projects
+
+skills
+
+contact
+
+github
+
+leetcode
+
+resume
+
+clear
+
+---
+
+## 10. AI Generated Project Recommendation
+
+Visitors can select
+
+Frontend
+
+Backend
+
+AI
+
+ML
+
+Full Stack
+
+Website recommends relevant projects dynamically.
+
+---
+
+## 11. Animated Background
+
+Choose one:
+
+Cyber Grid
+
+Particle System
+
+Star Field
+
+Neural Network
+
+Aurora Gradient
+
+Interactive Mesh
+
+---
+
+## 12. Reading Progress Bar
+
+Top progress indicator.
+
+---
+
+## 13. Scroll To Top Rocket
+
+Rocket launches while scrolling to top.
+
+---
+
+## 14. Live Clock & Greeting
+
+Dynamic greeting:
+
+Good Morning
+
+Good Afternoon
+
+Good Evening
+
+Based on local time.
+
+---
+
+## 15. Loading Screen
+
+Create a cinematic loading animation with logo reveal before entering the website.
+
+---
+
+# Final Goal
+
+The final portfolio should look like a premium SaaS product instead of a traditional portfolio. Every section should feel alive with smooth animations, interactive effects, elegant typography, and a polished user experience. The codebase should be production-ready, maintainable, responsive, SEO-friendly, and optimized for deployment on Vercel. The overall design should leave a lasting impression on recruiters, clients, and interviewers.

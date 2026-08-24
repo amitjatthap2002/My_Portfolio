@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+@import "tailwindcss";
+
+
+/* ============================================================
+   FORMAL PROFESSIONAL THEME
+   Inspired by: Linear, Vercel, GitHub — clean, minimal, dark
+   Dark Mode  : Deep slate-gray base, blue accent
+   Light Mode : Off-white base, indigo accent
+   ============================================================ */
+
+:root {
+  --background: #0a0d14;        /* Deep navy-slate */
+  --foreground: #e8eaf0;        /* Soft white — not harsh */
+
+  --primary: #3b82f6;           /* Blue-500 — trustworthy, professional */
+  --primary-glow: rgba(59, 130, 246, 0.12);
+  --secondary: #64748b;         /* Slate-500 — neutral secondary */
+
+  --card-bg: rgba(15, 20, 30, 0.75);
+  --card-border: rgba(51, 65, 85, 0.5);
+
+  --glass-bg: rgba(10, 13, 20, 0.80);
+  --glass-border: rgba(51, 65, 85, 0.4);
+  --nav-bg: rgba(10, 13, 20, 0.85);
+
+  --muted: #475569;             /* Muted text */
+  --accent-line: rgba(59, 130, 246, 0.2);  /* Subtle blue rule */
+
+  --scroll-thumb: #334155;
+}
+
+:root[data-theme='light'] {
+  --background: #f8f9fc;        /* Warm off-white */
+  --foreground: #0f172a;        /* Slate-900 */
+
+  --primary: #2563eb;           /* Blue-600 */
+  --primary-glow: rgba(37, 99, 235, 0.08);
+  --secondary: #475569;         /* Slate-600 */
+
+  --card-bg: rgba(255, 255, 255, 0.90);
+  --card-border: rgba(203, 213, 225, 0.8);
+
+  --glass-bg: rgba(248, 249, 252, 0.85);
+  --glass-border: rgba(203, 213, 225, 0.9);
+  --nav-bg: rgba(248, 249, 252, 0.90);
+
+  --muted: #64748b;
+  --accent-line: rgba(37, 99, 235, 0.15);
+
+  --scroll-thumb: #cbd5e1;
+
+  /* Invert Zinc colors for light mode so all hardcoded classes adapt */
+  --color-zinc-50: #020617;     /* slate-950 */
+  --color-zinc-100: #0f172a;    /* slate-900 */
+  --color-zinc-200: #1e293b;    /* slate-800 */
+  --color-zinc-300: #334155;    /* slate-700 */
+  --color-zinc-400: #475569;    /* slate-600 */
+  --color-zinc-500: #64748b;    /* slate-500 */
+  --color-zinc-600: #94a3b8;    /* slate-400 */
+  --color-zinc-700: #cbd5e1;    /* slate-300 */
+  --color-zinc-800: #e2e8f0;    /* slate-200 */
+  --color-zinc-900: #f1f5f9;    /* slate-100 */
+  --color-zinc-950: #f8fafc;    /* slate-50 */
+}
+
+@theme inline {
+  --font-sans: 'Inter', var(--font-geist-sans), sans-serif;
+  --font-mono: 'JetBrains Mono', var(--font-geist-mono), monospace;
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   Custom Scrollbar
+   ============================================================ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* ============================================================
+   Glassmorphism — formal, clean edges, no heavy blur
+   ============================================================ */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--card-border);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px -6px var(--primary-glow);
+}
+
+/* ============================================================
+   CRT Screen — Terminal only
+   ============================================================ */
+.crt-screen {
+  background: #060a12;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.crt-screen::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(
+    rgba(10, 10, 18, 0) 50%,
+    rgba(0, 0, 0, 0.18) 50%
+  );
+  z-index: 10;
+  background-size: 100% 2px;
+  pointer-events: none;
+}
+
+.crt-screen::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(10, 10, 18, 0.06);
+  opacity: 0;
+  z-index: 10;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+/* ============================================================
+   Animations — subtle and professional
+   ============================================================ */
+@keyframes flicker {
+  0%   { opacity: 0.08; }
+  50%  { opacity: 0.10; }
+  100% { opacity: 0.08; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px var(--primary));
+  }
+  50% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 10px var(--primary));
+  }
+}
+
+.pulse-glow-effect {
+  animation: pulse-glow 3s infinite ease-in-out;
+}
+
+/* Text shimmer — used sparingly */
+.shimmer-text {
+  background: linear-gradient(
+    to right,
+    var(--foreground) 20%,
+    var(--primary) 50%,
+    var(--foreground) 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 5s linear infinite;
+}
+
+@keyframes shimmer {
+  to { background-position: 200% center; }
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle dot-grid background — replaces heavy gradient grid */
+.grid-bg {
+  background-image: radial-gradient(
+    circle,
+    rgba(71, 85, 105, 0.18) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+:root[data-theme='light'] .grid-bg {
+  background-image: radial-gradient(
+    circle,
+    rgba(148, 163, 184, 0.25) 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+}
+
+/* Accent horizontal rule */
+.accent-rule {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-line),
+    transparent
+  );
+  border: none;
+  margin: 0;
+}
+
+/* Glow dot — timeline indicators */
+.glow-dot {
+  position: relative;
+}
+.glow-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary-glow);
+}
+
+/* Section label style */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  opacity: 0.85;
+}
+
+/* Tag pill */
+.tag-pill {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--primary);
+}
+
+:root[data-theme='light'] .tag-pill {
+  background: rgba(37, 99, 235, 0.06);
+  border-color: rgba(37, 99, 235, 0.18);
+  color: #2563eb;
+}
