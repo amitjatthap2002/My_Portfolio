@@ -44,13 +44,59 @@ export default function Home() {
               <p className="text-[10px] font-mono uppercase tracking-[0.3em] text-zinc-500">Current focus</p>
               <p className="mt-2 text-base text-zinc-200">Machine learning, deep learning, GenAI, agentic AI, and practical software engineering.</p>
             </div>
-            <PhotoUploadCard
-              label="Home photo"
-              description="Upload a photo that appears on the landing page."
-              initialSrc={portfolioData.personalInfo.sectionImageUrls?.home || portfolioData.personalInfo.profileImageUrl}
-              alt="Portfolio home photo"
-              previewClassName="h-56 w-full object-contain"
-            />
+            {/* Customized Profile Cover Banner */}
+            <div className="relative overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60 shadow-2xl flex flex-col pb-6">
+              {/* Green Banner Background */}
+              <div className="relative h-32 w-full bg-gradient-to-r from-emerald-950 via-emerald-900 to-zinc-950 flex items-center justify-end px-6 overflow-hidden">
+                {/* Gold geometric decorations on left */}
+                <div className="absolute left-0 top-0 h-full w-1/3 opacity-20 pointer-events-none bg-[radial-gradient(circle_at_top_left,rgba(251,191,36,0.3),transparent_60%)]" />
+                <div className="absolute left-0 top-0 h-full w-[4px] bg-gradient-to-b from-amber-400 via-yellow-500 to-transparent" />
+                
+                {/* Golden slash lines */}
+                <div className="absolute left-10 top-0 bottom-0 w-[2px] bg-amber-500/20 rotate-[30deg] origin-top" />
+                <div className="absolute left-20 top-0 bottom-0 w-[1px] bg-amber-500/10 rotate-[30deg] origin-top" />
+
+                {/* Banner Text Content on the Right */}
+                <div className="text-right space-y-1 z-10">
+                  <h3 className="text-xl md:text-2xl font-serif font-bold text-amber-100 tracking-wide border-b border-amber-500/30 pb-0.5 inline-block">
+                    Amit Jatthap
+                  </h3>
+                  <p className="text-[10px] md:text-xs font-sans font-semibold text-amber-400 tracking-widest uppercase">
+                    MCA (AI/ML) STUDENT
+                  </p>
+                  <p className="text-[9px] md:text-xs font-mono text-zinc-350 flex items-center justify-end gap-1">
+                    <span className="inline-block w-3.5 h-3.5 rounded-full border border-amber-500/30 flex items-center justify-center text-[8px] text-amber-400">✉</span>
+                    amitsumitjatthap@gmail.com
+                  </p>
+                </div>
+
+                {/* Edit Pencil top-right */}
+                <button className="absolute top-3 right-3 p-1.5 rounded-full bg-black/40 border border-zinc-700/50 hover:bg-black/60 text-zinc-300 hover:text-white transition">
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Profile Photo area (overlapping) */}
+              <div className="flex justify-between items-end px-6 -mt-10 z-20">
+                <div className="relative group">
+                  <div className="w-24 h-24 rounded-full border-4 border-zinc-950 overflow-hidden bg-zinc-900 shadow-xl">
+                    <img 
+                      src={portfolioData.personalInfo.profileImageUrl} 
+                      alt="Amit Jatthap profile" 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  {/* Edit Pencil next to profile */}
+                  <button className="absolute bottom-0 right-0 p-1.5 rounded-full bg-zinc-900 border border-zinc-850 hover:bg-zinc-800 text-zinc-300 hover:text-white transition shadow-lg">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
