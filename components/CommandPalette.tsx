@@ -35,9 +35,9 @@ export default function CommandPalette() {
     { label: "Toggle Terminal Console", icon: Terminal, action: () => triggerTerminal(), shortcut: "T C" },
     { label: "Toggle AI Assistant", icon: MessageSquareCode, action: () => triggerChatbot(), shortcut: "T A" },
     { label: "Download Resume", icon: FileText, action: () => downloadResume(), shortcut: "D R" },
-    { label: "Open GitHub Profile", icon: GithubIcon, action: () => window.open("https://github.com/amitjatthap", "_blank"), shortcut: "O G" },
-    { label: "Open LinkedIn Profile", icon: LinkedinIcon, action: () => window.open("https://linkedin.com/in/amit-jatthap", "_blank"), shortcut: "O L" },
-    { label: "Open LeetCode Profile", icon: LeetcodeIcon, action: () => window.open("https://leetcode.com/u/amitjatthap", "_blank"), shortcut: "O C" },
+    { label: "Open GitHub Profile", icon: GithubIcon, action: () => window.open(portfolioData.personalInfo.github, "_blank"), shortcut: "O G" },
+    { label: "Open LinkedIn Profile", icon: LinkedinIcon, action: () => window.open(portfolioData.personalInfo.linkedin, "_blank"), shortcut: "O L" },
+    { label: "Open LeetCode Profile", icon: LeetcodeIcon, action: () => window.open(portfolioData.personalInfo.leetcode, "_blank"), shortcut: "O C" },
   ];
 
   // Filter commands by search

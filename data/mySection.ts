@@ -687,7 +687,7 @@ export const contactSection: SectionEntry = {
     Phone: +91-9685193991
     Location: Khandwa, Madhya Pradesh, India
     GitHub: https://github.com/amitjatthap2002
-    LinkedIn: https://linkedin.com/in/amit-jatthap-3666962a8n
+    LinkedIn: https://www.linkedin.com/in/amit-jatthap-3666962a8/
     LeetCode: https://leetcode.com/u/Amit_Jatthap/
     
     Contact Form: Name, Email, Subject, Message fields available
@@ -739,7 +739,7 @@ export const contactSection: SectionEntry = {
 
 🔗 **Socials:**
 - GitHub: https://github.com/amitjatthap2002
-- LinkedIn: https://linkedin.com/in/amit-jatthap-3666962a8n
+- LinkedIn: https://www.linkedin.com/in/amit-jatthap-3666962a8/
 - LeetCode: https://leetcode.com/u/Amit_Jatthap/
 
 💬 Or use the **Contact Form** on the portfolio — I typically respond within **24 hours**!`,

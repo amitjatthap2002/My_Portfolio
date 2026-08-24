@@ -132,7 +132,7 @@ export const portfolioData: PortfolioData = {
     phone: "+91-9685193991",
     email: "amitsumitjatthap@gmail.com",
     github: "https://github.com/amitjatthap2002",
-    linkedin: "https://linkedin.com/in/amit-jatthap-3666962a8n",
+    linkedin: "https://www.linkedin.com/in/amit-jatthap-3666962a8/",
     leetcode: "https://leetcode.com/u/Amit_Jatthap/",
     resumeUrl: "#",
     profileImageUrl: "/assets/profile-photo.jpg",
@@ -456,7 +456,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       keywords: ["contact", "email", "phone", "linkedin", "github", "hire", "talk", "reach", "message", "call"],
-      response: "You can reach me at:\n- **Email**: amitsumitjatthap@gmail.com\n- **Phone**: +91-9685193991\n- **GitHub**: https://github.com/amitjatthap2002\n- **LinkedIn**: https://linkedin.com/in/amit-jatthap-3666962a8n"
+      response: "You can reach me at:\n- **Email**: amitsumitjatthap@gmail.com\n- **Phone**: +91-9685193991\n- **GitHub**: https://github.com/amitjatthap2002\n- **LinkedIn**: https://www.linkedin.com/in/amit-jatthap-3666962a8/"
     },
     {
       keywords: ["education", "jobs", "career", "work", "university", "college", "degree", "internship", "study", "studying"],

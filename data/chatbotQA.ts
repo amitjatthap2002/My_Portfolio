@@ -407,7 +407,7 @@ const contactQA: QAEntry[] = [
       { word: "talk", weight: 2 },
     ],
     answer:
-      "You can reach me at:\n\n📧 **Email:** amitsumitjatthap@gmail.com\n📞 **Phone:** +91-9685193991\n💼 **GitHub:** https://github.com/amitjatthap2002\n🔗 **LinkedIn:** https://linkedin.com/in/amit-jatthap-3666962a8n\n\nFeel free to use the **Contact form** on the portfolio to send a message directly!",
+      "You can reach me at:\n\n📧 **Email:** amitsumitjatthap@gmail.com\n📞 **Phone:** +91-9685193991\n💼 **GitHub:** https://github.com/amitjatthap2002\n🔗 **LinkedIn:** https://www.linkedin.com/in/amit-jatthap-3666962a8/\n\nFeel free to use the **Contact form** on the portfolio to send a message directly!",
   },
 ];
 
