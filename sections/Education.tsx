@@ -16,8 +16,8 @@ export default function Education() {
         <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">Education</h2>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60">
-        <img src={portfolioData.personalInfo.sectionImageUrls?.education || portfolioData.personalInfo.profileImageUrl} alt="Education photo space" className="h-40 w-full object-cover" />
+      <div className="overflow-hidden rounded-2xl border border-zinc-800/80 bg-zinc-950/60 flex justify-center items-center">
+        <img src={portfolioData.personalInfo.sectionImageUrls?.education || portfolioData.personalInfo.profileImageUrl} alt="Education photo space" className="w-full h-auto max-h-[400px] object-contain" />
       </div>
 
 
