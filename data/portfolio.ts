@@ -135,9 +135,9 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://linkedin.com/in/amit-jatthap-3666962a8n",
     leetcode: "https://leetcode.com/u/Amit_Jatthap/",
     resumeUrl: "#",
-    profileImageUrl: "https://www.analyticssteps.com/backend/media/thumbnail/4530462/5951113_1605265443_AI%20(7).jpg",
+    profileImageUrl: "/assets/ai_ml_home.png",
     sectionImageUrls: {
-      home: "https://www.analyticssteps.com/backend/media/thumbnail/4530462/5951113_1605265443_AI%20(7).jpg",
+      home: "/assets/ai_ml_home.png",
       about: "/assets/about-photo.png",
       skills: "/assets/profile-placeholder.svg",
       projects: "/assets/profile-placeholder.svg",
