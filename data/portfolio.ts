@@ -149,7 +149,7 @@ export const portfolioData: PortfolioData = {
       educationYears: 2,
       projectsCompleted: 4,
       technologiesCount: 16,
-      certificationsCount: 3,
+      certificationsCount: 5,
     }
   },
   skills: [
@@ -298,6 +298,20 @@ export const portfolioData: PortfolioData = {
       date: "2025",
       verifyUrl: "/assets/certs/generative_ai_outskill.pdf",
       imageUrl: "/assets/certs/generative_ai_outskill.png"
+    },
+    {
+      title: "Full Stack with AI Integration & Problem Solving Bootcamp",
+      organization: "Programming Pathshala",
+      date: "2026",
+      verifyUrl: "/assets/certs/fullstack_pathshala.png",
+      imageUrl: "/assets/certs/fullstack_pathshala.png"
+    },
+    {
+      title: "Hack KRMU 5.0",
+      organization: "K.R. Mangalam University",
+      date: "2026",
+      verifyUrl: "/assets/certs/hack_krmu.png",
+      imageUrl: "/assets/certs/hack_krmu.png"
     }
   ],
   education: [

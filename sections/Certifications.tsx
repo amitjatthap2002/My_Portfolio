@@ -20,34 +20,8 @@ export default function Certifications() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <motion.article
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.45 }}
-          className="group relative overflow-hidden glass-card rounded-2xl border border-dashed border-zinc-700/80 bg-zinc-950/40"
-        >
-          <div className="relative h-40 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(139,92,246,0.28),transparent_45%),radial-gradient(circle_at_bottom_right,rgba(6,182,212,0.2),transparent_45%)]" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex h-20 w-20 items-center justify-center rounded-2xl border border-white/15 bg-black/25 backdrop-blur-md shadow-[0_0_35px_rgba(139,92,246,0.12)] text-primary">
-                <BadgeCheck className="h-10 w-10" />
-              </div>
-            </div>
-          </div>
-          <div className="space-y-4 p-5">
-            <div className="space-y-1">
-              <h3 className="text-base font-semibold text-zinc-100">Add Your Certificate</h3>
-              <p className="text-sm text-zinc-400">Use this card as a placeholder for a new credential, badge, or verified achievement.</p>
-            </div>
-            <div className="flex items-center justify-between text-xs text-zinc-500">
-              <span className="font-mono uppercase tracking-wider">Ready to customize</span>
-              <span className="rounded-full border border-zinc-700 px-2.5 py-1 text-[10px] uppercase tracking-wider text-zinc-300">
-                Add now
-              </span>
-            </div>
-          </div>
-        </motion.article>
+
+
         {certifications.map((cert, index) => (
           <motion.article
             key={cert.title}
