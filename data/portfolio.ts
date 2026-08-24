@@ -141,7 +141,7 @@ export const portfolioData: PortfolioData = {
       about: "/assets/about-photo.png",
       skills: "/assets/profile-placeholder.svg",
       projects: "/assets/profile-placeholder.svg",
-      education: "/assets/education-banner.png",
+      education: "/assets/kr_mangalam_university.jpg",
       library: "/assets/profile-placeholder.svg",
       contact: "/assets/profile-placeholder.svg"
     },
