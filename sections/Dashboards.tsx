@@ -68,26 +68,32 @@ export default function Dashboards() {
           }
         }
 
-        // Fetch LeetCode Data (Using Alfa LeetCode API proxy as fallback)
-        const leetcodeUsername = portfolioData.personalInfo.leetcode.split("/").filter(Boolean).pop();
+        // Fetch LeetCode Data (Using Alfa LeetCode API proxy)
+        // Fix: filter(Boolean) + trim() handles trailing slashes correctly
+        const lcUrl = portfolioData.personalInfo.leetcode;
+        const leetcodeUsername = lcUrl.split("/").map(s => s.trim()).filter(Boolean).pop();
         if (leetcodeUsername) {
-          const lcRes = await fetch(`https://alfa-leetcode-api.onrender.com/${leetcodeUsername}/profile`);
-          if (lcRes.ok) {
-            const lcData = await lcRes.json();
-            if (lcData && !lcData.errors && lcData.totalSolved !== undefined) {
-              setLc((prev) => ({
-                ...prev,
-                totalSolved: lcData.totalSolved || prev.totalSolved,
-                totalQuestions: lcData.totalQuestions || prev.totalQuestions,
-                easySolved: lcData.easySolved || prev.easySolved,
-                easyTotal: lcData.totalEasy || prev.easyTotal,
-                mediumSolved: lcData.mediumSolved || prev.mediumSolved,
-                mediumTotal: lcData.totalMedium || prev.mediumTotal,
-                hardSolved: lcData.hardSolved || prev.hardSolved,
-                hardTotal: lcData.totalHard || prev.hardTotal,
-                contestRating: lcData.ranking || prev.contestRating, // use ranking as contest rating might be different
-              }));
+          try {
+            const lcRes = await fetch(`https://alfa-leetcode-api.onrender.com/${leetcodeUsername}/solved`);
+            if (lcRes.ok) {
+              const lcData = await lcRes.json();
+              if (lcData && !lcData.errors) {
+                setLc((prev) => ({
+                  ...prev,
+                  totalSolved: lcData.solvedProblem ?? prev.totalSolved,
+                  easySolved: lcData.easySolved ?? prev.easySolved,
+                  mediumSolved: lcData.mediumSolved ?? prev.mediumSolved,
+                  hardSolved: lcData.hardSolved ?? prev.hardSolved,
+                  easyTotal: lcData.totalEasy ?? prev.easyTotal,
+                  mediumTotal: lcData.totalMedium ?? prev.mediumTotal,
+                  hardTotal: lcData.totalHard ?? prev.hardTotal,
+                  totalQuestions: (lcData.totalEasy ?? 0) + (lcData.totalMedium ?? 0) + (lcData.totalHard ?? 0) || prev.totalQuestions,
+                }));
+              }
             }
+          } catch (lcErr) {
+            // LeetCode API unavailable — static fallback data will be used
+            console.warn("LeetCode API unavailable, using static data.", lcErr);
           }
         }
       } catch (error) {

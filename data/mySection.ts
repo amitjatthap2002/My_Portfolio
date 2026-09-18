@@ -823,6 +823,8 @@ export const allSections: SectionEntry[] = [
   goalsSection,
 ];
 
+import { sttCorrectionMap } from "./voiceBotDataset";
+
 // =============================================================
 // SIMILARITY SEARCH ENGINE (for mySection.ts)
 // =============================================================
@@ -845,8 +847,10 @@ export function findBestSectionAnswer(
   query: string,
   threshold = 2
 ): string | null {
-  const normalized = query.toLowerCase().replace(/[^a-z0-9\s]/gi, "").trim();
-  const tokens = normalized.split(/\s+/).filter(Boolean);
+  const rawNormalized = query.toLowerCase().replace(/[^a-z0-9\s]/gi, "").trim();
+  const rawTokens = rawNormalized.split(/\s+/).filter(Boolean);
+  const tokens = rawTokens.map((t) => sttCorrectionMap[t] || t);
+  const normalized = tokens.join(" ");
 
   let bestScore = 0;
   let bestAnswer: string | null = null;

@@ -523,10 +523,22 @@ const generalQA: QAEntry[] = [
   },
 ];
 
+import { voiceBotQADataset, sttCorrectionMap } from "./voiceBotDataset";
+
+// Map voiceBotQADataset items to QAEntry format
+const voiceBotConvertedQA: QAEntry[] = voiceBotQADataset.map((item) => ({
+  section: (item.category === "hinglish" ? "general" : item.category) as PortfolioSection,
+  intent: item.id,
+  questions: item.questions,
+  keywords: item.keywords,
+  answer: item.answer,
+}));
+
 // ============================================================
 // MASTER KNOWLEDGE BASE — Export
 // ============================================================
 export const chatbotKnowledgeBase: QAEntry[] = [
+  ...voiceBotConvertedQA,
   ...introQA,
   ...skillsQA,
   ...projectsQA,
@@ -559,8 +571,12 @@ export const chatbotKnowledgeBase: QAEntry[] = [
  * @returns best-matching answer string or null if no match found
  */
 export function findBestAnswer(query: string, threshold = 2): string | null {
-  const normalized = query.toLowerCase().replace(/[^a-z0-9\s]/gi, "").trim();
-  const tokens = normalized.split(/\s+/).filter(Boolean);
+  const rawNormalized = query.toLowerCase().replace(/[^a-z0-9\s]/gi, "").trim();
+  const rawTokens = rawNormalized.split(/\s+/).filter(Boolean);
+
+  // Apply STT Correction Map to tokens
+  const tokens = rawTokens.map((t) => sttCorrectionMap[t] || t);
+  const normalized = tokens.join(" ");
 
   let bestScore = 0;
   let bestAnswer: string | null = null;
@@ -569,13 +585,31 @@ export function findBestAnswer(query: string, threshold = 2): string | null {
   for (const entry of chatbotKnowledgeBase) {
     let score = 0;
 
+    // 1. Direct Question Phrase / Substring Match (Big Boost)
+    if (entry.questions) {
+      for (const qVariant of entry.questions) {
+        const normQ = qVariant.toLowerCase().replace(/[^a-z0-9\s]/gi, "").trim();
+        if (normQ === normalized) {
+          score += 6.0; // exact question match
+          break;
+        } else if (normQ.length > 5 && normalized.includes(normQ)) {
+          score += 4.0;
+          break;
+        } else if (normalized.length > 5 && normQ.includes(normalized)) {
+          score += 3.5;
+          break;
+        }
+      }
+    }
+
+    // 2. Keyword Weighted Search
     for (const kw of entry.keywords) {
       const kwLower = kw.word.toLowerCase();
 
       if (kwLower.includes(" ")) {
         // Multi-word phrase: check in full normalized query
         if (normalized.includes(kwLower)) {
-          score += kw.weight * 1.5; // bonus for phrase match
+          score += kw.weight * 1.5;
         }
       } else {
         // Single word: exact token match
@@ -602,7 +636,7 @@ export function findBestAnswer(query: string, threshold = 2): string | null {
   // Debug log (remove in production)
   if (process.env.NODE_ENV === "development") {
     console.log(
-      `[Aetheria] Best match: "${bestIntent}" | Score: ${bestScore.toFixed(2)}`
+      `[Aetheria] Query: "${query}" | Best match: "${bestIntent}" | Score: ${bestScore.toFixed(2)}`
     );
   }
 

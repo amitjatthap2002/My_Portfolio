@@ -288,3 +288,12 @@ body {
   border-color: rgba(37, 99, 235, 0.18);
   color: #2563eb;
 }
+
+/* ============================================================
+   MUSIC SYNTH — Sound Wave Bar Animation
+   Used by MusicSynth component ambient music toggle button
+   ============================================================ */
+@keyframes soundWave {
+  0% { transform: scaleY(0.3); }
+  100% { transform: scaleY(1); }
+}

@@ -1,0 +1,162 @@
+{
+  "datasetInfo": {
+    "title": "Amit Jatthap Portfolio Voice Bot Knowledge Base & Training Dataset",
+    "version": "2.0.0",
+    "lastUpdated": "2026-09-18",
+    "description": "Comprehensive Q&A dataset covering personal bio, education, tech stack, projects, certifications, stats, contact info, and Hinglish queries for the voice assistant."
+  },
+  "sttCorrectionMap": {
+    "amrit": "amit",
+    "ameet": "amit",
+    "skil": "skills",
+    "skils": "skills",
+    "projedt": "projects",
+    "projek": "projects",
+    "contect": "contact",
+    "contat": "contact",
+    "emai": "email",
+    "gmail": "email",
+    "mail": "email",
+    "edukation": "education",
+    "colllege": "college",
+    "clg": "college",
+    "linkdin": "linkedin",
+    "litcode": "leetcode",
+    "kaun": "who",
+    "kon": "who",
+    "kya": "what",
+    "kahan": "where",
+    "padhai": "education",
+    "batao": "tell"
+  },
+  "qaPairs": [
+    {
+      "id": "bio.who_is_amit",
+      "category": "bio",
+      "questions": [
+        "Who is Amit?",
+        "Tell me about Amit",
+        "Who are you?",
+        "Introduce yourself",
+        "What is your name?",
+        "Give me your bio",
+        "Amit kaun hai",
+        "Aapke bare me batao",
+        "Amit ke bare me bataiye"
+      ],
+      "answer": "My name is **Amit Jatthap**. I am an AI/ML Developer & Software Engineer pursuing MCA in AI/ML. I specialize in building practical AI systems, agentic workflows, machine learning models, and modern full-stack web applications."
+    },
+    {
+      "id": "bio.location",
+      "category": "bio",
+      "questions": [
+        "Where do you live?",
+        "Where are you from?",
+        "What is your location?",
+        "Which city are you from?",
+        "Kahan rehte ho?",
+        "Amit kahan se hai?"
+      ],
+      "answer": "I am based in **Khandwa, Madhya Pradesh, India**. I am open to remote opportunities as well as relocating for full-time software and AI developer roles."
+    },
+    {
+      "id": "education.degree_overview",
+      "category": "education",
+      "questions": [
+        "What is your education?",
+        "Tell me about your degrees",
+        "Where did you study?",
+        "What college did you go to?",
+        "Qualification kya hai?",
+        "Padhai kahan se ki?",
+        "MCA kahan se kar rahe ho?"
+      ],
+      "answer": "I completed my **B.Sc. in Computer Science** from Devi Ahilya Vishwavidlayava (DAVV), Indore. Currently, I am pursuing my **MCA in AI & ML** from K.R. Mangalam University, Gurugram."
+    },
+    {
+      "id": "skills.all_skills",
+      "category": "skills",
+      "questions": [
+        "What are your skills?",
+        "What technologies do you know?",
+        "What is your tech stack?",
+        "Skills kya hai?",
+        "Kya kya aata hai?",
+        "Technical skills batao"
+      ],
+      "answer": "My core skills span:\n• **AI/ML & GenAI**: Python, Scikit-Learn, PyTorch, TensorFlow, LangChain, LangGraph, Agentic AI\n• **Core CS**: Data Structures & Algorithms, Operating Systems, DBMS, Object-Oriented Programming\n• **Data Analytics**: Pandas, NumPy, Matplotlib, Seaborn, Power BI, Tableau\n• **Full Stack & Web**: React, Next.js, TypeScript, Tailwind CSS, REST APIs\n• **Tools**: Git, GitHub, Docker, VS Code, Linux"
+    },
+    {
+      "id": "projects.all_projects",
+      "category": "projects",
+      "questions": [
+        "What projects have you built?",
+        "Tell me about your projects",
+        "Show me your work",
+        "Projects kya hain?",
+        "Konsa project banaya h?",
+        "Best project konsa hai?"
+      ],
+      "answer": "I have built several AI & Web projects:\n1. 🌿 **EcoMatch**: AI-powered plant recommendation engine combining XGBoost, Scikit-learn, and React.\n2. 🔍 **ASIE (Agentic Search Engine)**: Multi-agent web search engine powered by LangGraph, Python & FastApi.\n3. 🛡️ **Malware Detection System**: Random Forest & Neural Network classifier for real-time binary threat analysis.\n4. 🎵 **MusicSynth**: Interactive audio visualizer & Web Audio API synthesizer built in Next.js."
+    },
+    {
+      "id": "stats.leetcode",
+      "category": "stats",
+      "questions": [
+        "What are your LeetCode stats?",
+        "How many LeetCode questions solved?",
+        "LeetCode rank kya hai?",
+        "LeetCode stats batao"
+      ],
+      "answer": "I have solved **350+ Data Structures & Algorithms problems** on LeetCode with a contest rating of ~1,842. I regularly practice problem solving in C++ and Python."
+    },
+    {
+      "id": "certifications.all",
+      "category": "certifications",
+      "questions": [
+        "What certifications do you have?",
+        "Tell me about your certificates",
+        "Certifications kya hai?"
+      ],
+      "answer": "My key certifications include:\n• **Machine Learning Specialization** (Coursera / DeepLearning.AI)\n• **Deep Learning & Neural Networks**\n• **Python for Data Science & AI** (IBM / Coursera)\n• **Full-Stack Web Development**\n• **Data Structures & Algorithms in C++**"
+    },
+    {
+      "id": "goals.hiring",
+      "category": "goals",
+      "questions": [
+        "Are you available for work?",
+        "Are you looking for a job or internship?",
+        "Can I hire you?",
+        "Job chahiye kya?"
+      ],
+      "answer": "Yes! I am **actively open for full-time job roles and high-impact internships** in AI/ML Engineering, Generative AI Development, and Full-Stack Software Engineering. I am ready to work remotely or relocate."
+    },
+    {
+      "id": "contact.info",
+      "category": "contact",
+      "questions": [
+        "Contact",
+        "Contect",
+        "Contact details",
+        "Contect details",
+        "Contact ke bare me",
+        "Contact ke baare me",
+        "Contect ke bare me",
+        "Contect ke baare me",
+        "Contact info",
+        "Contect info",
+        "Contact number",
+        "Contect number",
+        "How can I contact you?",
+        "What is your email?",
+        "What is your phone number?",
+        "Contact details kya hain?",
+        "Aapko message kaise kare?",
+        "Email ID do",
+        "Phone number do",
+        "Mobile number do"
+      ],
+      "answer": "You can connect with me via:\n• 📧 **Email**: amitsumitjatthap@gmail.com\n• 📱 **Phone**: +91-9685193991\n• 💼 **LinkedIn**: linkedin.com/in/amit-jatthap-3666962a8\n• 🐙 **GitHub**: github.com/amitjatthap2002"
+    }
+  ]
+}

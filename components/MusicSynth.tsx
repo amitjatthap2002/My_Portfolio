@@ -209,13 +209,6 @@ export default function MusicSynth() {
         )}
       </button>
 
-      {/* Embedded CSS for soundwave animation */}
-      <style jsx global>{`
-        @keyframes soundWave {
-          0% { transform: scaleY(0.3); }
-          100% { transform: scaleY(1); }
-        }
-      `}</style>
     </div>
   );
 }

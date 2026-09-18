@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Terminal, SunMoon, User, Briefcase, Award, Library, MessageSquareCode, Award as LeetcodeIcon, FileText, X } from "lucide-react";
+import { portfolioData } from "@/data/portfolio";
 
 const GithubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
