@@ -116,12 +116,12 @@ export const aboutSection: SectionEntry = {
   title: "About Me",
   content: `
     Bio: Computer Science graduate focused on AI/ML, generative AI, agentic systems, and web development.
-    Journey: B.Sc. Computer Science at DAVV → MCA AI/ML at K.R. Mangalam University.
+    Journey: B.Sc. Computer Science at DAVV (08-2021 – 03-2024) → MCA AI/ML at K.R. Mangalam University (09-2025 – 06-2027).
     Career Goal: Build intelligent, explainable, scalable AI products.
-    Stats: 2+ Years Coding | 4+ Projects | 16+ Tech Stack Skills | 3 Certifications
+    Stats: 2+ Years Coding | 3 Projects | 20+ Tech Stack Skills | 5 Certifications
     Education Timeline:
-      - 2020–2024: B.Sc. Computer Science — DAVV (Devi Ahilya Vishwavidyalaya)
-      - 2025–2027: MCA AI/ML — K.R. Mangalam University (SGPA: 8.31)
+      - 08-2021 – 03-2024: B.Sc. Computer Science — Devi Ahilya Vishwavidyalaya (CGPA: 6.9)
+      - 09-2025 – 06-2027: MCA AI/ML — K.R. Mangalam University (SGPA: 8.31 (SEM 2))
   `,
   questions: [
     "Tell me about yourself",
@@ -160,16 +160,16 @@ export const aboutSection: SectionEntry = {
   answer: `I'm **Amit Jatthap**, a Computer Science graduate focused on AI/ML, generative AI, agentic systems, and web development.
 
 📖 **My Journey:**
-I completed my **B.Sc. in Computer Science** at Devi Ahilya Vishwavidyalaya (DAVV) and am now pursuing an **MCA in AI/ML** at K.R. Mangalam University (SGPA: 8.31).
+I completed my **Bachelor of Science in Computer Science** at Devi Ahilya Vishwavidyalaya (DAVV), Indore (08-2021 – 03-2024, CGPA: 6.9) and am now pursuing **Master in Computer Application (AI/ML)** at K.R. Mangalam University, Gurugram (09-2025 – 06-2027, SGPA: 8.31 (SEM 2)).
 
 🎯 **Career Vision:**
 To build intelligent, explainable, and scalable AI products that solve real-world problems and create meaningful business impact.
 
 📊 **Quick Stats:**
 - ⚡ 2+ Years Coding
-- 📦 4+ Projects Completed
-- 🛠️ 16+ Technologies
-- 🏆 3 Certifications`,
+- 📦 3 Major AI Projects Completed
+- 🛠️ 20+ Technologies Mastered
+- 🏆 5 Verified Certifications`,
 };
 
 // =============================================================
@@ -180,13 +180,12 @@ export const skillsSection: SectionEntry = {
   title: "Skills & Tech Galaxy",
   content: `
     Section label: 02 / CORE CAPABILITIES
-    Galaxy Orbit Skills: Gen AI (95%), RAG (90%), Agentic AI (85%), Deep Learning (88%), Machine Learning (92%)
     
     Categories:
-    Core Skills: DSA (88%), OS (82%), DBMS (84%), Web Dev (86%)
-    AI/ML: Machine Learning (90%), Deep Learning (86%), Gen AI (88%), Agentic AI (85%), Python (90%), Scikit-learn (84%), TensorFlow (80%), PyTorch (78%)
-    Data & Analytics: Pandas (86%), NumPy (84%), Matplotlib (80%), Seaborn (78%), Power BI (80%), Tableau (78%)
-    Tools: Git (84%), GitHub (88%), VS Code (92%), IntelliJ IDEA (80%), Docker (74%)
+    Languages: Python (90%), Java (75%), HTML (88%), CSS (85%), SQL (82%), JavaScript (84%)
+    Core Coursework: DSA (88%), OS (82%), DBMS (84%), Web Dev (86%)
+    AI/ML & Python Libraries: Machine Learning (90%), Deep Learning (86%), Gen AI (88%), Agentic AI (85%), Scikit-learn (84%), TensorFlow (80%), Keras (78%), PyTorch (78%), Pandas (86%), NumPy (84%), Matplotlib (80%), Seaborn (78%)
+    Developer Tools: VS Code (92%), IntelliJ IDEA (80%), Power BI (80%), Tableau (78%), Office 365 (82%), Git (84%), GitHub (88%), Docker (74%)
   `,
   questions: [
     "What skills do you have?",
@@ -197,6 +196,8 @@ export const skillsSection: SectionEntry = {
     "What are your strongest skills?",
     "What programming languages do you know?",
     "Do you know Python?",
+    "Do you know Java?",
+    "Do you know SQL?",
     "Do you know machine learning?",
     "What AI tools are you proficient in?",
     "What frameworks do you use?",
@@ -223,12 +224,17 @@ export const skillsSection: SectionEntry = {
     { word: "abilities", weight: 3 },
     { word: "frameworks", weight: 2 },
     { word: "python", weight: 3 },
+    { word: "java", weight: 3 },
+    { word: "sql", weight: 3 },
     { word: "machine learning", weight: 3 },
     { word: "deep learning", weight: 3 },
     { word: "pytorch", weight: 3 },
     { word: "tensorflow", weight: 3 },
+    { word: "keras", weight: 3 },
     { word: "langgraph", weight: 3 },
     { word: "docker", weight: 3 },
+    { word: "power bi", weight: 3 },
+    { word: "tableau", weight: 3 },
     { word: "capable", weight: 2 },
     { word: "build", weight: 2 },
     { word: "frontend", weight: 3 },
@@ -238,31 +244,22 @@ export const skillsSection: SectionEntry = {
     { word: "competencies", weight: 2 },
     { word: "data science", weight: 3 },
   ],
-  answer: `Here's my full skill set across every category:
+  answer: `Here's my verified technical skillset from my resume:
 
-🧠 **Core CS Fundamentals**
-- Data Structures & Algorithms — 88%
-- Operating Systems — 82%
-- DBMS — 84%
-- Web Development — 86%
+💻 **Languages**
+- Python (90%), Java (75%), HTML (88%), CSS (85%), SQL (82%), JavaScript (84%)
 
-🤖 **AI / ML (My Strongest Zone)**
-- Machine Learning — 90% | Deep Learning — 86%
-- Generative AI — 88% | Agentic AI (LangGraph) — 85%
-- Python — 90% | Scikit-learn — 84%
-- TensorFlow — 80% | PyTorch — 78%
+🧠 **Coursework / Core CS**
+- Data Structures & Algorithms (88%), DBMS (84%), Operating Systems (82%), Web Development (86%)
 
-📊 **Data & Analytics**
-- Pandas — 86% | NumPy — 84%
-- Matplotlib — 80% | Seaborn — 78%
-- Power BI — 80% | Tableau — 78%
+🤖 **AI/ML & Python Libraries**
+- Machine Learning (90%), Deep Learning (86%), Gen AI (88%), Agentic AI (85%)
+- Scikit-learn (84%), TensorFlow (80%), Keras (78%), PyTorch (78%)
+- Pandas (86%), NumPy (84%), Matplotlib (80%), Seaborn (78%)
 
-🌐 **Web Development**
-- React, Next.js, HTML, CSS, JavaScript, TypeScript
-- FastAPI, Express.js, REST APIs, PostgreSQL
-
-🛠️ **DevTools**
-- Git — 84% | GitHub — 88% | VS Code — 92% | Docker — 74%`,
+🛠️ **Developer Tools & Frameworks**
+- Git (84%), GitHub (88%), VS Code (92%), IntelliJ IDEA (80%), Docker (74%)
+- Power BI (80%), Tableau (78%), Office 365 (82%), FastAPI, React`,
 };
 
 // =============================================================
@@ -278,20 +275,20 @@ export const projectsSection: SectionEntry = {
     1. EcoMatch (active)
        Tagline: AI-Powered Waste Exchange Platform
        Tech: LangGraph, FastAPI, PostgreSQL, Python, Express.js
-       Features: Multi-agent collaboration, confidence scoring, explainable AI workflows, microservices
+       Features: 4 autonomous LangGraph agents, confidence scoring, explainable AI workflows, microservices
        Architecture: LangGraph Agents → FastAPI Services → Express.js Gateway → PostgreSQL
     
     2. ASIE - Adaptive Skill Intelligence Engine (completed)
        Tagline: Future Skill Demand Forecasting
-       Tech: Python, FastAPI, React, XGBoost, spaCy, NetworkX
-       Features: Skill forecasting (XGBoost+Prophet+Holt-Winters), NLP extraction (spaCy), SHAP, knowledge graph
+       Tech: Python, FastAPI, React, XGBoost, spaCy, NetworkX, SHAP, Docker
+       Features: Skill forecasting (XGBoost+Prophet+Holt-Winters), NLP extraction (spaCy), SHAP explainability, knowledge graph (NetworkX), 56-hour hackathon prototype
        Architecture: React Frontend → FastAPI Backend → ML Engine → Docker
     
-    3. AI Malware Detection System (completed)
-       Tagline: ML Pipeline for Malware Classification
-       Tech: Python, Scikit-learn, SHAP, Machine Learning
-       Features: Feature engineering, GridSearchCV, Precision/Recall/F1/AUC-ROC, SHAP explainability
-       Architecture: Python Pipeline → Scikit-learn Model → SHAP Explainability → Metrics
+    3. AI Sales Voice Agent (completed)
+       Tagline: Hallucination-Controlled Conversational AI
+       Tech: React, FastAPI, SQLite, LLM, Speech-to-Text, Text-to-Speech
+       Features: Real-time speech-to-text/text-to-speech, non-hallucination prompt architecture preventing fabricated prices/features outside catalog, backend-enforced conversation memory, evidence-based intent classification
+       Architecture: React Frontend → FastAPI Backend → SQLite Database → LLM Engine → Speech Pipeline
   `,
   questions: [
     "What projects have you built?",
@@ -303,11 +300,13 @@ export const projectsSection: SectionEntry = {
     "What are you most proud of building?",
     "What is EcoMatch?",
     "Tell me about ASIE",
-    "What is the malware detection project?",
+    "What is the AI Sales Voice Agent project?",
+    "Tell me about your voice agent project",
     "Have you built anything with LangGraph?",
     "Do you have any live projects?",
     "What problem does EcoMatch solve?",
     "How does ASIE work?",
+    "How does the AI Sales Voice Agent prevent hallucination?",
     "What is your most complex project?",
     "Can you walk me through your projects?",
     "What have you shipped?",
@@ -315,6 +314,7 @@ export const projectsSection: SectionEntry = {
     "Tell me about your AI projects",
     "Which project used XGBoost?",
     "Which project used SHAP?",
+    "Tell me about your speech to text project",
   ],
   keywords: [
     { word: "project", weight: 3 },
@@ -328,7 +328,12 @@ export const projectsSection: SectionEntry = {
     { word: "shipped", weight: 2 },
     { word: "ecomatch", weight: 3 },
     { word: "asie", weight: 3 },
-    { word: "malware", weight: 3 },
+    { word: "voice", weight: 3 },
+    { word: "sales", weight: 3 },
+    { word: "agent", weight: 3 },
+    { word: "voice agent", weight: 3 },
+    { word: "speech", weight: 3 },
+    { word: "hallucination", weight: 3 },
     { word: "langgraph", weight: 2 },
     { word: "xgboost", weight: 3 },
     { word: "shap", weight: 3 },
@@ -344,25 +349,25 @@ export const projectsSection: SectionEntry = {
 ---
 🌿 **1. EcoMatch** *(Active)*
 > AI-Powered Waste Exchange Platform
-- Multiple AI agents classify waste, match businesses & estimate environmental impact
+- Multiple AI agents collaborate to classify waste, match businesses & estimate environmental impact
 - **Stack:** LangGraph, FastAPI, PostgreSQL, Python, Express.js
-- Features: Multi-agent pipelines, confidence scoring, explainable AI
+- Features: 4 autonomous LangGraph agents, confidence scoring, explainable AI workflows
 
 ---
 🧠 **2. ASIE** *(Completed)*
 > Adaptive Skill Intelligence Engine
 - Predicts future high-demand skills over next 3–5 years using ML + NLP
-- **Stack:** Python, FastAPI, React, XGBoost, spaCy, NetworkX
-- Features: Skill forecasting, SHAP explainability, knowledge graph
+- **Stack:** Python, FastAPI, React, XGBoost, Prophet, spaCy, NetworkX, SHAP, Docker
+- Features: Skill forecasting, SHAP explainability, knowledge graph, 56h hackathon prototype
 
 ---
-🛡️ **3. AI Malware Detection System** *(Completed)*
-> ML Pipeline for Malware Classification
-- End-to-end malware detection with feature engineering & explainability
-- **Stack:** Python, Scikit-learn, SHAP
-- Features: GridSearchCV tuning, F1/AUC-ROC evaluation, SHAP insights
+🎙️ **3. AI Sales Voice Agent** *(Completed)*
+> Hallucination-Controlled Conversational AI
+- Voice-first AI sales agent with real-time speech-to-text/text-to-speech powered by LLM backend
+- **Stack:** React, FastAPI, SQLite, LLM, Speech-to-Text, Text-to-Speech
+- Features: Non-hallucination prompt architecture guarding product catalog, backend-enforced conversation memory, evidence-based intent classification
 
-Check the **Projects** section for GitHub links & detailed architecture!`,
+Check the **Projects** section for GitHub links, live demos & detailed architecture!`,
 };
 
 // =============================================================
@@ -457,12 +462,14 @@ export const certificationsSection: SectionEntry = {
   title: "Certifications",
   content: `
     Section label: 04 / VERIFIED EXPERTISE
-    Description: Credentials reflecting focus on full-stack development, AI systems, and production-grade delivery.
+    Description: Credentials reflecting focus on AI systems, machine learning, and full-stack development.
     
     Certifications:
-    1. Power BI for Beginners — Simplilearn (2025)
+    1. Power BI for Beginner — Simplilearn (2025)
     2. Machine Learning with Python — IBM (2025)
     3. Generative AI — OutSkills (2025)
+    4. HackKrmu- Hackathon 5.0 — K.R. Mangalam University (2026)
+    5. Full Stack with AI Integration & Problem Solving Bootcamp — Programming Pathshala (2026)
   `,
   questions: [
     "What certifications do you have?",
@@ -479,6 +486,7 @@ export const certificationsSection: SectionEntry = {
     "Which organizations certified you?",
     "Are your certifications recent?",
     "What training have you completed?",
+    "Tell me about Hack KRMU 5.0",
     "Do you have any Simplilearn certifications?",
   ],
   keywords: [
@@ -491,16 +499,17 @@ export const certificationsSection: SectionEntry = {
     { word: "ibm", weight: 3 },
     { word: "simplilearn", weight: 3 },
     { word: "outskills", weight: 3 },
+    { word: "hackathon", weight: 3 },
+    { word: "krmu", weight: 3 },
     { word: "power bi", weight: 3 },
     { word: "badge", weight: 2 },
     { word: "training", weight: 2 },
     { word: "course", weight: 2 },
     { word: "verified", weight: 2 },
-    { word: "credential", weight: 2 },
   ],
-  answer: `I hold **3 verified certifications**:
+  answer: `I hold **verified certifications and hackathon credentials**:
 
-🏆 **Power BI for Beginners**
+🏆 **Power BI for Beginner**
 - Organization: Simplilearn | Year: 2025
 
 🏆 **Machine Learning with Python**
@@ -509,7 +518,13 @@ export const certificationsSection: SectionEntry = {
 🏆 **Generative AI**
 - Organization: OutSkills | Year: 2025
 
-All credentials focus on modern AI systems and data-driven development. Visit the **Certifications** section on the portfolio to verify each one!`,
+🏆 **HackKrmu- Hackathon 5.0**
+- Organization: K.R. Mangalam University | Year: 2026
+
+🏆 **Full Stack with AI Integration & Problem Solving Bootcamp**
+- Organization: Programming Pathshala | Year: 2026
+
+Visit the **Certifications** section on my portfolio to verify each certificate!`,
 };
 
 // =============================================================
@@ -898,4 +913,4 @@ export function findBestSectionAnswer(
  * SECTION FALLBACK RESPONSE
  */
 export const SECTION_FALLBACK =
-  "Hmm, I didn't find a precise match! Try asking about:\n• **Who is Amit** (intro)\n• **Skills** (tech stack, AI/ML, web)\n• **Projects** (EcoMatch, ASIE, Malware Detection)\n• **Education**\n• **Certifications**\n• **Books** (library)\n• **LeetCode / GitHub stats**\n• **Contact** (email, LinkedIn)\n• **Goals** (internship, future plans)";
+  "Hmm, I didn't find a precise match! Try asking about:\n• **Who is Amit** (intro)\n• **Skills** (tech stack, AI/ML, web)\n• **Projects** (EcoMatch, ASIE, AI Sales Voice Agent)\n• **Education**\n• **Certifications**\n• **Books** (library)\n• **LeetCode / GitHub stats**\n• **Contact** (email, LinkedIn)\n• **Goals** (internship, future plans)";

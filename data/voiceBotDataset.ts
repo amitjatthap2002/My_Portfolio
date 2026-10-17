@@ -7,7 +7,7 @@
  * - Personal Bio & Background
  * - Education (MCA, B.Sc, DAVV, K.R. Mangalam)
  * - Tech Stack & Skills (AI/ML, Python, Web Dev, DSA, Tools)
- * - Projects (EcoMatch, ASIE, Malware Detection, MusicSynth, Portfolio)
+ * - Projects (EcoMatch, ASIE, AI Sales Voice Agent)
  * - Certifications & Achievements
  * - LeetCode & GitHub Stats
  * - Career Goals & Job Availability
@@ -256,7 +256,7 @@ export const voiceBotQADataset: VoiceBotQAPair[] = [
       { word: "dikhao", weight: 2 },
     ],
     answer:
-      "I have built several AI & Web projects:\n1. 🌿 **EcoMatch**: AI-powered plant recommendation engine combining XGBoost, Scikit-learn, and React.\n2. 🔍 **ASIE (Agentic Search Engine)**: Multi-agent web search engine powered by LangGraph, Python & FastApi.\n3. 🛡️ **Malware Detection System**: Random Forest & Neural Network classifier for real-time binary threat analysis.\n4. 🎵 **MusicSynth**: Interactive audio visualizer & Web Audio API synthesizer built in Next.js.",
+      "I have built 3 major AI projects:\n1. 🌿 **EcoMatch**: AI-Powered Waste Exchange Platform using 4 autonomous LangGraph agents and FastAPI.\n2. 🧠 **ASIE**: Adaptive Skill Intelligence Engine for future skill forecasting using XGBoost, Prophet, spaCy NLP, and SHAP (built in 56h at Hackathon).\n3. 🎙️ **AI Sales Voice Agent**: Hallucination-Controlled Conversational AI with real-time speech pipeline, catalog guardrails, and conversation memory.",
   },
   {
     id: "projects.ecomatch",
@@ -266,52 +266,64 @@ export const voiceBotQADataset: VoiceBotQAPair[] = [
       "What is EcoMatch project?",
       "EcoMatch kya hai?",
       "How does EcoMatch work?",
-      "Plant recommendation project details",
+      "Waste exchange project details",
+      "LangGraph project kya hai?",
     ],
     keywords: [
       { word: "ecomatch", weight: 3 },
-      { word: "plant", weight: 3 },
-      { word: "recommendation", weight: 2 },
-      { word: "xgboost", weight: 2 },
+      { word: "waste", weight: 3 },
+      { word: "exchange", weight: 3 },
+      { word: "langgraph", weight: 3 },
+      { word: "agents", weight: 2 },
     ],
     answer:
-      "**EcoMatch** is an AI-powered ecological recommendation engine. It takes environmental factors like soil pH, rainfall, temperature, and sunlight to recommend optimal plant species using trained XGBoost and Decision Tree ML models.",
+      "**EcoMatch** is an Agentic AI platform where multiple AI agents collaborate to classify waste, discover compatible businesses, generate proposals, and estimate environmental impact. Built with 4 autonomous LangGraph agents, FastAPI, Express.js, and PostgreSQL with explainable AI workflows.",
   },
   {
     id: "projects.asie",
     category: "projects",
     questions: [
       "What is ASIE?",
-      "Tell me about Agentic Search Engine",
+      "Tell me about ASIE project",
       "ASIE project details",
-      "LangGraph search engine project",
+      "Skill forecasting project",
+      "Skill forecasting kya hai?",
+      "Hackathon project konsa hai?",
     ],
     keywords: [
       { word: "asie", weight: 3 },
-      { word: "search", weight: 3 },
-      { word: "agentic", weight: 3 },
-      { word: "langgraph", weight: 3 },
+      { word: "skill", weight: 3 },
+      { word: "forecasting", weight: 3 },
+      { word: "xgboost", weight: 3 },
+      { word: "prophet", weight: 2 },
+      { word: "hackathon", weight: 2 },
     ],
     answer:
-      "**ASIE (Agentic Search & Intelligence Engine)** is an autonomous multi-agent search platform. Built with Python and LangGraph, it breaks complex search queries into sub-goals, scrapes search results, synthesizes information, and outputs verified executive reports.",
+      "**ASIE (Adaptive Skill Intelligence Engine)** is an AI-powered skill forecasting system to predict high-demand skills for the next 3–5 years. It was built within 56 hours at a hackathon using Python, FastAPI backend, React frontend, XGBoost, Prophet, Holt-Winters, spaCy NLP, SHAP explainability, and NetworkX knowledge graphs.",
   },
   {
-    id: "projects.malware",
+    id: "projects.voice_agent",
     category: "projects",
     questions: [
-      "Tell me about Malware Detection project",
-      "What is your cybersecurity project?",
-      "Malware detector details",
-      "Malware detection project kya hai?",
+      "Tell me about AI Sales Voice Agent",
+      "What is your voice agent project?",
+      "Voice sales project details",
+      "Voice agent kya hai?",
+      "Conversational AI project",
+      "Speech to text project",
+      "How do you control hallucination?",
     ],
     keywords: [
-      { word: "malware", weight: 3 },
-      { word: "security", weight: 3 },
-      { word: "detection", weight: 3 },
-      { word: "cybersecurity", weight: 2 },
+      { word: "voice", weight: 3 },
+      { word: "sales", weight: 3 },
+      { word: "voice agent", weight: 3 },
+      { word: "speech", weight: 3 },
+      { word: "hallucination", weight: 3 },
+      { word: "conversational", weight: 2 },
+      { word: "memory", weight: 2 },
     ],
     answer:
-      "The **Malware Detection System** is a machine learning security application that analyzes PE header files and static binary attributes to classify files as benign or malicious with high accuracy using Random Forest classifiers.",
+      "The **AI Sales Voice Agent** is a voice-first conversational AI built using React, FastAPI, SQLite, and an LLM backend with real-time speech-to-text and text-to-speech. It features a non-hallucination prompt architecture guarding the product catalog from fabricated prices or features, backend-enforced conversation memory, and evidence-based intent classification.",
   },
 
   // =========================================================================
@@ -376,11 +388,13 @@ export const voiceBotQADataset: VoiceBotQAPair[] = [
       { word: "certifications", weight: 3 },
       { word: "certificates", weight: 3 },
       { word: "certified", weight: 3 },
-      { word: "coursera", weight: 2 },
+      { word: "ibm", weight: 3 },
+      { word: "simplilearn", weight: 3 },
+      { word: "hackathon", weight: 3 },
       { word: "courses", weight: 2 },
     ],
     answer:
-      "My key certifications include:\n• **Machine Learning Specialization** (Coursera / DeepLearning.AI)\n• **Deep Learning & Neural Networks**\n• **Python for Data Science & AI** (IBM / Coursera)\n• **Full-Stack Web Development**\n• **Data Structures & Algorithms in C++**",
+      "My key certifications include:\n• 🏆 **Power BI for Beginner** (Simplilearn, 2025)\n• 🏆 **Machine Learning with Python** (IBM, 2025)\n• 🏆 **Generative AI** (OutSkills, 2025)\n• 🏆 **HackKrmu- Hackathon 5.0** (K.R. Mangalam University, 2026)\n• 🏆 **Full Stack with AI Integration & Problem Solving** (Programming Pathshala, 2026)",
   },
 
   // =========================================================================
@@ -486,7 +500,7 @@ export const voiceBotQADataset: VoiceBotQAPair[] = [
       { word: "passions", weight: 2 },
     ],
     answer:
-      "In my free time, I enjoy reading tech & AI books (like *Designing Data-Intensive Applications* and *Hands-On Machine Learning*), solving algorithm puzzles on LeetCode, exploring open-source AI projects, and building side projects.",
+      "In my free time, I enjoy reading insightful books like the **Bhagavad Gita**, **The Psychology of Money**, and **The Power of Habit**, solving algorithm problems on LeetCode, exploring open-source AI projects, and building practical full-stack AI applications.",
   },
 
   // =========================================================================

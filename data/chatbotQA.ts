@@ -239,7 +239,7 @@ const projectsQA: QAEntry[] = [
       { word: "applications", weight: 2 },
     ],
     answer:
-      "I have built **3 major AI projects**:\n\n1. 🌿 **EcoMatch** — AI-Powered Waste Exchange Platform\n   LangGraph multi-agent system with FastAPI & PostgreSQL for sustainable waste matching.\n\n2. 🧠 **ASIE** — Adaptive Skill Intelligence Engine\n   ML system using XGBoost + Prophet for future skill demand forecasting with SHAP explainability.\n\n3. 🛡️ **AI Malware Detection System**\n   End-to-end ML pipeline using Scikit-learn, feature engineering & SHAP for malware classification.\n\nCheck out the Projects section for detailed architecture, features, and GitHub links!",
+      "I have built **3 major AI projects**:\n\n1. 🌿 **EcoMatch** — AI-Powered Waste Exchange Platform\n   4 autonomous LangGraph agents with FastAPI & PostgreSQL for sustainable waste matching.\n\n2. 🧠 **ASIE** — Adaptive Skill Intelligence Engine\n   ML system using XGBoost + Prophet for future skill demand forecasting with SHAP explainability.\n\n3. 🎙️ **AI Sales Voice Agent** — Hallucination-Controlled Conversational AI\n   Voice-first sales agent with real-time speech pipeline, catalog guardrails, and conversation memory.\n\nCheck out the Projects section for detailed architecture, features, and GitHub links!",
   },
   {
     section: "projects",
@@ -258,7 +258,7 @@ const projectsQA: QAEntry[] = [
       { word: "agents", weight: 2 },
     ],
     answer:
-      "**EcoMatch** is an AI-Powered Waste Exchange Platform.\n\n🌿 **What it does:** Multiple AI agents collaborate to classify waste, discover compatible businesses, generate proposals, and estimate environmental impact.\n\n**Tech Stack:** LangGraph, FastAPI, PostgreSQL, Python, Express.js\n\n**Key Features:**\n- LangGraph-based multi-agent collaboration\n- Confidence scoring and autonomous decision pipelines\n- Explainable AI workflows for waste classification\n- FastAPI + Express.js microservices",
+      "**EcoMatch** is an AI-Powered Waste Exchange Platform.\n\n🌿 **What it does:** Multiple AI agents collaborate to classify waste, discover compatible businesses, generate proposals, and estimate environmental impact.\n\n**Tech Stack:** LangGraph, FastAPI, PostgreSQL, Python, Express.js\n\n**Key Features:**\n- 4 autonomous LangGraph agents with confidence scoring\n- Autonomous decision pipelines in a scalable microservices architecture\n- Explainable AI workflows with confidence-driven decision making\n- FastAPI + Express.js microservices",
   },
   {
     section: "projects",
@@ -278,27 +278,32 @@ const projectsQA: QAEntry[] = [
       { word: "prophet", weight: 2 },
     ],
     answer:
-      "**ASIE** — Adaptive Skill Intelligence Engine\n\n🧠 **What it does:** Predicts future high-demand skills over the next 3–5 years using machine learning and NLP.\n\n**Tech Stack:** Python, FastAPI, React, XGBoost, spaCy, NetworkX\n\n**Key Features:**\n- Skill forecasting using XGBoost, Prophet, and Holt-Winters\n- NLP-based skill extraction using spaCy\n- SHAP-based explainability\n- Knowledge graph generation using NetworkX",
+      "**ASIE** — Adaptive Skill Intelligence Engine\n\n🧠 **What it does:** Predicts future high-demand skills over the next 3–5 years using machine learning and NLP.\n\n**Tech Stack:** Python, FastAPI, React, XGBoost, Prophet, spaCy, NetworkX, SHAP, Docker\n\n**Key Features:**\n- Skill forecasting using XGBoost, Prophet, and Holt-Winters\n- NLP-based skill extraction using spaCy\n- SHAP-based explainability\n- Knowledge graph generation using NetworkX\n- Built within 56 hours at a hackathon as a Dockerized prototype",
   },
   {
     section: "projects",
-    intent: "projects.malware",
+    intent: "projects.voice_agent",
     questions: [
-      "Tell me about the malware detection project",
-      "AI malware detection system",
-      "What is the cybersecurity project?",
+      "Tell me about the AI Sales Voice Agent project",
+      "AI Sales Voice Agent details",
+      "What is your voice agent project?",
+      "How does the voice sales agent work?",
+      "Tell me about conversational AI project",
+      "Voice assistant project kya hai?",
     ],
     keywords: [
-      { word: "malware", weight: 3 },
-      { word: "detection", weight: 2 },
-      { word: "cybersecurity", weight: 3 },
-      { word: "security", weight: 2 },
-      { word: "shap", weight: 2 },
-      { word: "random forest", weight: 3 },
-      { word: "classification", weight: 2 },
+      { word: "voice", weight: 3 },
+      { word: "sales", weight: 3 },
+      { word: "voice agent", weight: 3 },
+      { word: "speech", weight: 3 },
+      { word: "conversational", weight: 2 },
+      { word: "hallucination", weight: 3 },
+      { word: "agent", weight: 2 },
+      { word: "stt", weight: 2 },
+      { word: "tts", weight: 2 },
     ],
     answer:
-      "**AI Malware Detection System**\n\n🛡️ **What it does:** An end-to-end malware detection pipeline using ML for classification and interpretability.\n\n**Tech Stack:** Python, Scikit-learn, SHAP, Machine Learning\n\n**Key Features:**\n- Feature engineering and selection\n- Model comparison and hyperparameter tuning with GridSearchCV\n- Precision, Recall, F1-score, and AUC-ROC evaluation\n- SHAP explainability for model insight",
+      "**AI Sales Voice Agent** — Hallucination-Controlled Conversational AI\n\n🎙️ **What it does:** A voice-first AI sales agent with real-time speech-to-text and text-to-speech, powered by an LLM backend for natural dialogue.\n\n**Tech Stack:** React, FastAPI, SQLite, LLM, Speech-to-Text, Text-to-Speech\n\n**Key Features:**\n- Real-time speech-to-text / text-to-speech powered by LLM backend\n- Non-hallucination prompt architecture strictly preventing fabricated prices or features outside product catalog\n- Backend-enforced conversation memory retaining customer details across turns\n- Evidence-based intent classification separating price objections from genuine rejection",
   },
 ];
 
@@ -330,7 +335,7 @@ const educationQA: QAEntry[] = [
       { word: "jobs", weight: 2 },
     ],
     answer:
-      "📚 **Education Timeline:**\n\n🎓 **B.Sc. Computer Science** — Devi Ahilya Vishwavidyalaya (Aug 2021 – Mar 2024)\n- CGPA: 6.9\n- Built strong foundation in programming, DSA, Operating Systems, and Database Systems\n\n🎓 **MCA (AI/ML)** — K.R. Mangalam University (Sep 2025 – Jun 2027)\n- Current SGPA: 8.31\n- Specializing in Machine Learning, Deep Learning, and Generative AI\n\nI am actively seeking an **AI/ML or GenAI internship** to contribute to real-world products.",
+      "📚 **Education Timeline:**\n\n🎓 **Master in Computer Application (AI/ML)** — K.R. Mangalam University, Gurugram (Sep 2025 – Jun 2027)\n- Current SGPA: **8.31 (SEM 2)**\n- Specializing in Machine Learning, Deep Learning, Generative AI, and Agentic AI\n\n🎓 **Bachelor of Science in Computer Science** — Devi Ahilya Vishwavidyalaya, Indore (Aug 2021 – Mar 2024)\n- CGPA: **6.9**\n- Built strong foundation in programming, DSA, Operating Systems, and Database Management Systems\n\nI am actively seeking an **AI/ML or GenAI internship** to contribute to real-world products.",
   },
   {
     section: "education",
@@ -349,7 +354,7 @@ const educationQA: QAEntry[] = [
       { word: "sgpa", weight: 3 },
     ],
     answer:
-      "I am currently pursuing **MCA in AI/ML** at **K.R. Mangalam University** (Sep 2025 – Jun 2027).\n\n- Current SGPA: **8.31**\n- Focus: Machine Learning, Deep Learning, Generative AI, Agentic AI\n- Building hands-on projects alongside coursework",
+      "I am currently pursuing **MCA in AI/ML** at **K.R. Mangalam University** (Sep 2025 – Jun 2027).\n\n- Current SGPA: **8.31 (SEM 2)**\n- Focus: Machine Learning, Deep Learning, Generative AI, Agentic AI\n- Building hands-on projects alongside coursework",
   },
 ];
 
@@ -365,6 +370,7 @@ const certificationsQA: QAEntry[] = [
       "Are you certified?",
       "Show me your certificates",
       "What courses have you completed?",
+      "Hack KRMU 5.0",
     ],
     keywords: [
       { word: "certification", weight: 3 },
@@ -375,9 +381,11 @@ const certificationsQA: QAEntry[] = [
       { word: "courses", weight: 2 },
       { word: "course", weight: 2 },
       { word: "credential", weight: 2 },
+      { word: "hackathon", weight: 3 },
+      { word: "krmu", weight: 3 },
     ],
     answer:
-      "I hold **3 certifications** in the tech and AI field:\n\n🏆 **Power BI for Beginners** — Simplilearn (2025)\n🏆 **Machine Learning with Python** — IBM (2025)\n🏆 **Generative AI** — OutSkills (2025)\n\nCheck the Certifications section on the portfolio for verification links!",
+      "I hold verified certifications and hackathon credentials:\n\n🏆 **Power BI for Beginner** — Simplilearn (2025)\n🏆 **Machine Learning with Python** — IBM (2025)\n🏆 **Generative AI** — OutSkills (2025)\n🏆 **HackKrmu- Hackathon 5.0** — K.R. Mangalam University (2026)\n🏆 **Full Stack with AI Integration & Problem Solving** — Programming Pathshala (2026)\n\nCheck the Certifications section on the portfolio for verification links!",
   },
 ];
 
@@ -648,4 +656,4 @@ export function findBestAnswer(query: string, threshold = 2): string | null {
  * Used when no entry scores above the threshold.
  */
 export const FALLBACK_RESPONSE =
-  "I couldn't find a precise match in Amit's profile database. Try asking about his:\n• **Skills** (AI/ML, web dev)\n• **Projects** (EcoMatch, ASIE, Malware Detection)\n• **Education** (MCA, B.Sc.)\n• **Certifications**\n• **Contact** (email, LinkedIn)\n• **LeetCode / GitHub stats**";
+  "I couldn't find a precise match in Amit's profile database. Try asking about his:\n• **Skills** (AI/ML, web dev)\n• **Projects** (EcoMatch, ASIE, AI Sales Voice Agent)\n• **Education** (MCA, B.Sc.)\n• **Certifications**\n• **Contact** (email, LinkedIn)\n• **LeetCode / GitHub stats**";

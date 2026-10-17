@@ -43,6 +43,14 @@ export interface EducationItem {
   skillsUsed: string[];
 }
 
+export interface MilestoneItem {
+  title: string;
+  organization: string;
+  duration: string;
+  description: string;
+  color: "primary" | "secondary" | "emerald" | "amber";
+}
+
 export interface ResourceItem {
   title: string;
   category: "Book" | "Course" | "Documentation" | "Research Paper" | "Blog" | "Video" | "Tool";
@@ -111,6 +119,7 @@ export interface PortfolioData {
   projects: Project[];
   certifications: Certification[];
   education: EducationItem[];
+  milestones: MilestoneItem[];
   knowledgeLibrary: ResourceItem[];
   leetcodeStats: LeetCodeStats;
   githubStats: GitHubStats;
@@ -147,12 +156,23 @@ export const portfolioData: PortfolioData = {
     },
     stats: {
       educationYears: 2,
-      projectsCompleted: 4,
-      technologiesCount: 16,
+      projectsCompleted: 3,
+      technologiesCount: 20,
       certificationsCount: 5,
     }
   },
   skills: [
+    {
+      category: "Languages",
+      items: [
+        { name: "Python", level: 90, iconName: "Python" },
+        { name: "Java", level: 75, iconName: "Java" },
+        { name: "HTML", level: 88, iconName: "Html" },
+        { name: "CSS", level: 85, iconName: "Css" },
+        { name: "SQL", level: 82, iconName: "Sql" },
+        { name: "JavaScript", level: 84, iconName: "Javascript" }
+      ]
+    },
     {
       category: "Core Skills",
       items: [
@@ -169,9 +189,9 @@ export const portfolioData: PortfolioData = {
         { name: "Deep Learning", level: 86, iconName: "Dl" },
         { name: "Gen AI", level: 88, iconName: "Genai" },
         { name: "Agentic AI", level: 85, iconName: "Agentic" },
-        { name: "Python", level: 90, iconName: "Python" },
         { name: "Scikit-learn", level: 84, iconName: "Scikit" },
         { name: "TensorFlow", level: 80, iconName: "Tensorflow" },
+        { name: "Keras", level: 78, iconName: "Keras" },
         { name: "PyTorch", level: 78, iconName: "Pytorch" }
       ]
     },
@@ -181,9 +201,7 @@ export const portfolioData: PortfolioData = {
         { name: "Pandas", level: 86, iconName: "Pandas" },
         { name: "NumPy", level: 84, iconName: "Numpy" },
         { name: "Matplotlib", level: 80, iconName: "Matplotlib" },
-        { name: "Seaborn", level: 78, iconName: "Seaborn" },
-        { name: "Power BI", level: 80, iconName: "Powerbi" },
-        { name: "Tableau", level: 78, iconName: "Tableau" }
+        { name: "Seaborn", level: 78, iconName: "Seaborn" }
       ]
     },
     {
@@ -193,7 +211,10 @@ export const portfolioData: PortfolioData = {
         { name: "GitHub", level: 88, iconName: "Github" },
         { name: "VS Code", level: 92, iconName: "Vscode" },
         { name: "IntelliJ IDEA", level: 80, iconName: "Intellij" },
-        { name: "Docker", level: 74, iconName: "Docker" }
+        { name: "Docker", level: 74, iconName: "Docker" },
+        { name: "Power BI", level: 80, iconName: "Powerbi" },
+        { name: "Tableau", level: 78, iconName: "Tableau" },
+        { name: "Office 365", level: 82, iconName: "Office" }
       ]
     }
   ],
@@ -202,13 +223,13 @@ export const portfolioData: PortfolioData = {
       id: "ecomatch",
       name: "EcoMatch",
       tagline: "AI-Powered Waste Exchange Platform",
-      description: "An agentic AI platform where multiple AI agents collaborate to classify waste, discover compatible businesses, generate proposals, and estimate environmental impact.",
-      detailedDescription: "EcoMatch uses LangGraph and FastAPI to orchestrate autonomous AI agents for waste classification and sustainable recommendations. The platform combines explainable AI workflows, confidence-based decision-making, and scalable microservices for business matching.",
+      description: "An agentic AI platform using LangGraph where multiple AI agents collaborate to classify waste, discover compatible businesses, generate proposals, and estimate environmental impact.",
+      detailedDescription: "EcoMatch uses LangGraph and FastAPI to orchestrate 4 autonomous LangGraph agents with LLMs, confidence scoring, and autonomous decision pipelines in a scalable microservices architecture. Built scalable FastAPI + Express.js microservices with explainable AI workflows and confidence-driven decision making.",
       features: [
-        "LangGraph-based multi-agent collaboration",
-        "Confidence scoring and autonomous decision pipelines",
-        "FastAPI and Express.js microservices",
-        "Explainable AI workflows for waste classification"
+        "Developed 4 autonomous LangGraph agents with LLMs and confidence scoring",
+        "Autonomous decision pipelines in a scalable microservices architecture",
+        "Built scalable FastAPI + Express.js microservices",
+        "Explainable AI workflows with confidence-driven decision making"
       ],
       techStack: ["LangGraph", "FastAPI", "PostgreSQL", "Python", "Express.js", "AI Agents"],
       status: "active",
@@ -228,15 +249,15 @@ export const portfolioData: PortfolioData = {
       id: "asie",
       name: "ASIE",
       tagline: "Adaptive Skill Intelligence Engine",
-      description: "An AI-powered skill forecasting system for predicting future high-demand skills over the next 3–5 years.",
-      detailedDescription: "ASIE is a full-stack application that uses machine learning and NLP to extract skill trends, predict future demand, and generate a knowledge graph of relationships between skills.",
+      description: "An AI-powered skill forecasting system to predict high-demand skills for the next 3–5 years, built within 56 hours at a hackathon.",
+      detailedDescription: "ASIE is a full-stack application using FastAPI backend and React frontend. It integrates XGBoost, Prophet, Holt-Winters and spaCy NLP for skill extraction, SHAP for explainability, and NetworkX for knowledge graph generation. Delivered as a Dockerized, cloud-ready prototype within 56 hours.",
       features: [
-        "Skill forecasting using XGBoost, Prophet, and Holt-Winters",
-        "NLP-based skill extraction using spaCy",
-        "SHAP-based explainability",
-        "Knowledge graph generation using NetworkX"
+        "Full-stack app using FastAPI backend and React frontend",
+        "Integrated XGBoost, Prophet, Holt-Winters and spaCy NLP for skill extraction",
+        "Used SHAP for explainability and NetworkX for knowledge graph generation",
+        "Delivered a Dockerized, cloud-ready prototype within 56 hours (Hackathon project)"
       ],
-      techStack: ["Python", "FastAPI", "React", "XGBoost", "spaCy", "NetworkX"],
+      techStack: ["Python", "FastAPI", "React", "XGBoost", "spaCy", "NetworkX", "SHAP", "Docker"],
       status: "completed",
       githubUrl: "https://github.com/amitjatthap2002/ASIE_Project_2026/tree/main/ASIE",
       liveUrl: "#",
@@ -246,35 +267,35 @@ export const portfolioData: PortfolioData = {
         "NLP skill extraction results.",
         "Knowledge graph visualization."
       ],
-      challenges: "Translating raw skill data into explainable forecasts in a short hackathon timeline.",
+      challenges: "Translating raw skill data into explainable forecasts within a 56-hour hackathon timeline.",
       learnings: "Integrated forecasting and NLP models into a cloud-ready, Dockerized prototype quickly and effectively.",
       architecture: ["React Frontend", "FastAPI Backend", "ML Forecasting Engine", "Docker Container"]
     },
     {
-      id: "malware-detection",
-      name: "AI Malware Detection System",
-      tagline: "ML Pipeline for Malware Classification",
-      description: "An end-to-end malware detection pipeline using Python and Scikit-learn for classification and interpretability.",
-      detailedDescription: "This project focused on preprocessing, feature engineering, and model comparison to improve malware detection accuracy and explainability.",
+      id: "ai-sales-voice-agent",
+      name: "AI Sales Voice Agent",
+      tagline: "Hallucination-Controlled Conversational AI",
+      description: "A voice-first AI sales agent with real-time speech-to-text/text-to-speech, powered by an LLM backend for natural dialogue with non-hallucination prompt architecture.",
+      detailedDescription: "Built a voice-first AI sales agent using React, FastAPI, and SQLite with real-time speech-to-text/text-to-speech, powered by an LLM backend for natural dialogue. Engineered a non-hallucination prompt architecture preventing fabricated prices or features outside the product catalog. Implemented backend-enforced conversation memory and evidence-based intent classification.",
       features: [
-        "Feature engineering and selection",
-        "Model comparison and hyperparameter tuning",
-        "Precision, recall, F1-score, and AUC-ROC evaluation",
-        "SHAP explainability for model insight"
+        "Real-time speech-to-text/text-to-speech powered by LLM backend",
+        "Non-hallucination prompt architecture preventing fabricated prices or features",
+        "Backend-enforced conversation memory retaining customer details across turns",
+        "Evidence-based intent classification separating price objections from genuine rejection"
       ],
-      techStack: ["Python", "Scikit-learn", "SHAP", "Machine Learning"],
+      techStack: ["React", "FastAPI", "SQLite", "LLM", "Speech-to-Text", "Text-to-Speech"],
       status: "completed",
       githubUrl: "https://github.com/amitjatthap2002",
       liveUrl: "#",
-      imageUrl: "/assets/projects/malware-detection.png",
+      imageUrl: "/assets/projects/voice-agent.jpg",
       screenshots: [
-        "Feature engineering workflow.",
-        "Model performance comparison.",
-        "Explainability summary for predictions."
+        "Voice conversation interface.",
+        "Real-time speech transcription view.",
+        "Product catalog with hallucination guard."
       ],
-      challenges: "Improving classification performance while keeping the model interpretable for real-world use.",
-      learnings: "Used GridSearchCV and SHAP to optimize and explain the final Random Forest model.",
-      architecture: ["Python Pipeline", "Scikit-learn Model", "SHAP Explainability", "Evaluation Metrics"]
+      challenges: "Engineering a non-hallucination prompt architecture that prevents fabricated product information while maintaining natural conversational flow.",
+      learnings: "Implemented evidence-based intent classification and backend-enforced conversation memory for reliable AI sales interactions.",
+      architecture: ["React Frontend", "FastAPI Backend", "SQLite Database", "LLM Engine", "Speech Pipeline"]
     }
   ],
   certifications: [
@@ -334,6 +355,22 @@ export const portfolioData: PortfolioData = {
         "Developing practical expertise in machine learning, deep learning, and generative AI."
       ],
       skillsUsed: ["AI/ML", "Deep Learning", "Gen AI", "Agentic AI"]
+    }
+  ],
+  milestones: [
+    {
+      title: "Hack KRMU 5.0 – Hackathon",
+      organization: "K.R. Mangalam University",
+      duration: "2026",
+      description: "Participated in Hack KRMU 5.0, building the ASIE (Adaptive Skill Intelligence Engine) project — an AI-powered skill forecasting system using XGBoost, Prophet, and NLP-based skill extraction.",
+      color: "secondary"
+    },
+    {
+      title: "Industry Certifications & Skill Building",
+      organization: "IBM · Simplilearn · Programming Pathshala · Outskill",
+      duration: "2025 - 2026",
+      description: "Earned certifications in Machine Learning (IBM), Power BI (Simplilearn), Generative AI (Outskill), and Full Stack with AI Integration (Programming Pathshala). Focused on building industry-ready skills alongside academics.",
+      color: "emerald"
     }
   ],
   knowledgeLibrary: [
@@ -444,35 +481,35 @@ export const portfolioData: PortfolioData = {
     },
     {
       keywords: ["where", "living", "location", "address", "city", "residence", "based"],
-      response: "I am currently based in Sohna, Gurugram, Haryana."
+      response: "I am from Khandwa, Madhya Pradesh, India, and currently pursuing MCA in AI/ML at K.R. Mangalam University in Gurugram, India."
     },
     {
-      keywords: ["project", "portfolio", "ecomatch", "asie", "malware", "work", "apps", "projects", "build", "built", "made"],
-      response: "I have built several major AI projects: 1. **EcoMatch** (An AI-powered waste exchange platform using LangGraph agents and FastAPI), 2. **ASIE** (An Adaptive Skill Intelligence Engine for future skill prediction using XGBoost, Prophet and NLP), and 3. **AI Malware Detection System** (Using feature engineering and Random Forest optimization with explainable AI)."
+      keywords: ["project", "portfolio", "ecomatch", "asie", "voice", "sales", "work", "apps", "projects", "build", "built", "made", "agent"],
+      response: "I have built 3 major AI projects:\n1. 🌿 **EcoMatch** (AI-Powered Waste Exchange Platform using 4 autonomous LangGraph agents and FastAPI)\n2. 🧠 **ASIE** (Adaptive Skill Intelligence Engine for future skill forecasting using XGBoost, Prophet, spaCy NLP, and SHAP)\n3. 🎙️ **AI Sales Voice Agent** (Hallucination-Controlled Conversational AI with real-time speech-to-text/text-to-speech, prompt architecture guardrails, and conversation memory)."
     },
     {
       keywords: ["skills", "technology", "tech", "python", "machine learning", "ai", "backend", "databases", "fastapi", "know", "stack", "frameworks", "deep learning", "agentic", "genai", "abilities", "expertise", "what can"],
-      response: "Here's a breakdown of my skills by category:\n\n🧠 **Core CS Fundamentals**\n- Data Structures & Algorithms\n- Operating Systems\n- Database Management System (DBMS)\n\n🤖 **AI / ML**\n- Machine Learning\n- Deep Learning\n- Generative AI (Gen AI)\n- Agentic AI (LangGraph, LangChain)\n- Python, Scikit-learn, TensorFlow, PyTorch, SHAP\n\n📊 **Data & Analytics**\n- Pandas, NumPy, Matplotlib, Seaborn\n- Power BI, Tableau\n\n🌐 **Web Development**\n- HTML, CSS, JavaScript\n- React, Next.js\n- FastAPI, Express.js, REST APIs\n\n🛠️ **Tools**\n- Git, GitHub, VS Code, Docker"
+      response: "Here's a breakdown of my skills from my resume:\n\n💻 **Languages**\n- Python, Java, HTML, CSS, SQL, JavaScript\n\n🧠 **Core CS & Coursework**\n- Data Structures & Algorithms, DBMS, Operating Systems, Web Development\n\n🤖 **AI / ML & Libraries**\n- Machine Learning, Deep Learning, Generative AI & Agentic AI\n- Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, PyTorch\n\n🛠️ **Developer Tools & Frameworks**\n- Git, GitHub, VS Code, IntelliJ IDEA, Docker, Power BI, Tableau, Office 365, FastAPI, React"
     },
     {
       keywords: ["contact", "email", "phone", "linkedin", "github", "hire", "talk", "reach", "message", "call"],
-      response: "You can reach me at:\n- **Email**: amitsumitjatthap@gmail.com\n- **Phone**: +91-9685193991\n- **GitHub**: https://github.com/amitjatthap2002\n- **LinkedIn**: https://www.linkedin.com/in/amit-jatthap-3666962a8/"
+      response: "You can reach me at:\n- **Email**: amitsumitjatthap@gmail.com\n- **Phone**: +91-9685193991\n- **Location**: Khandwa, Madhya Pradesh, India\n- **GitHub**: https://github.com/amitjatthap2002\n- **LinkedIn**: http://linkedin.com/in/amit-jatthap-3666962a8n\n- **LeetCode**: https://leetcode.com/u/Amit_jatthap/"
     },
     {
       keywords: ["education", "jobs", "career", "work", "university", "college", "degree", "internship", "study", "studying"],
-      response: "I am currently pursuing a Master of Computer Applications (AI/ML) at K.R. Mangalam University (2025–2027) with a current SGPA of 8.31. Previously, I completed my B.Sc. in Computer Science at Devi Ahilya Vishwavidyalaya. I am actively seeking an AI/ML or GenAI internship to contribute to real-world products."
+      response: "My education background:\n🎓 **Master in Computer Application (AI/ML)** — K.R. Mangalam University, Gurugram (09-2025 – 06-2027) with SGPA: 8.31 (SEM 2).\n🎓 **Bachelor of Science in Computer Science** — Devi Ahilya Vishwavidyalaya, Indore (08-2021 – 03-2024) with CGPA: 6.9.\n\nI am actively seeking an AI/ML or GenAI internship!"
     },
     {
       keywords: ["goals", "future", "objective", "aim", "plan", "vision"],
-      response: "My short-term goal is to secure an AI/ML internship. In the long term, I aim to build AI platforms for India in areas like cybersecurity, education, governance, and cloud infrastructure, eventually creating startup-scale products."
+      response: "My short-term goal is to secure an AI/ML or GenAI internship. In the long term, I aim to build impactful AI platforms in areas like education, cybersecurity, and enterprise automation, creating startup-scale products."
     },
     {
       keywords: ["certification", "certifications", "certificate", "certificates", "courses", "certified"],
-      response: "I hold several certifications in the tech and AI field, including:\n- **Power BI for Beginners** from Simplilearn (2025)\n- **Machine Learning with Python** from IBM (2025)\n- **Generative AI** from OutSkills (2025)\nCheck the Certifications section on my portfolio for more details!"
+      response: "I hold verified certifications:\n- **Power BI for Beginner** — Simplilearn (2025)\n- **Machine Learning with Python** — IBM (2025)\n- **Generative AI** — OutSkills (2025)\n- **HackKrmu- Hackathon 5.0** — K.R. Mangalam University (2026)\n- **Full Stack with AI Integration & Problem Solving** — Programming Pathshala (2026)"
     },
     {
       keywords: ["library", "resource", "resources", "books", "reading", "knowledge", "research", "paper", "blog", "articles"],
-      response: "My Knowledge Library section contains a curated list of resources I highly recommend. It includes essential books like 'Designing Data-Intensive Applications', research papers like 'Attention Is All You Need', and various courses and documentation on LangGraph and Next.js."
+      response: "In my Knowledge Library, I have featured books that shaped my mindset:\n1. 📖 **Bhagavad Gita** — Teaches duty, mind control, and inner peace\n2. 📖 **The Psychology of Money** — Teaches how behavior drives financial decisions\n3. 📖 **The Power of Habit** — Teaches the science of habit formation and productivity"
     }
   ]
 };

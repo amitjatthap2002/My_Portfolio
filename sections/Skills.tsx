@@ -6,23 +6,22 @@ import { portfolioData, Skill } from "@/data/portfolio";
 import { Cpu, Terminal, Compass } from "lucide-react";
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState("Frontend");
-  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
-
   const categories = portfolioData.skills.map((s) => s.category);
+  const [activeCategory, setActiveCategory] = useState(categories[0] || "Languages");
+  const [hoveredSkill, setHoveredSkill] = useState<Skill | null>(null);
 
   // Skill items in currently active category
   const activeSkills = portfolioData.skills.find(
     (s) => s.category === activeCategory
   )?.items || [];
 
-  // Orbital Galaxy data: list of 10 primary skills mapped onto orbital coordinates
+  // Orbital Galaxy data: list of primary skills mapped onto orbital coordinates
   const galaxySkills = [
-    { name: "Gen AI", radius: 55, speed: 18, angleOffset: 0, level: 95 },
-    { name: "RAG", radius: 55, speed: 18, angleOffset: Math.PI, level: 90 },
-    { name: "Agentic AI", radius: 85, speed: 12, angleOffset: Math.PI / 4, level: 85 },
-    { name: "Deep Learning", radius: 85, speed: 12, angleOffset: (5 * Math.PI) / 4, level: 88 },
-    { name: "Machine Learning", radius: 115, speed: 9, angleOffset: Math.PI / 2, level: 92 },
+    { name: "Gen AI", radius: 55, speed: 18, angleOffset: 0, level: 88 },
+    { name: "Agentic AI", radius: 55, speed: 18, angleOffset: Math.PI, level: 85 },
+    { name: "Python", radius: 85, speed: 12, angleOffset: Math.PI / 4, level: 90 },
+    { name: "Deep Learning", radius: 85, speed: 12, angleOffset: (5 * Math.PI) / 4, level: 86 },
+    { name: "Machine Learning", radius: 115, speed: 9, angleOffset: Math.PI / 2, level: 90 },
   ];
 
   return (

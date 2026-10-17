@@ -97,7 +97,7 @@
         "Konsa project banaya h?",
         "Best project konsa hai?"
       ],
-      "answer": "I have built several AI & Web projects:\n1. 🌿 **EcoMatch**: AI-powered plant recommendation engine combining XGBoost, Scikit-learn, and React.\n2. 🔍 **ASIE (Agentic Search Engine)**: Multi-agent web search engine powered by LangGraph, Python & FastApi.\n3. 🛡️ **Malware Detection System**: Random Forest & Neural Network classifier for real-time binary threat analysis.\n4. 🎵 **MusicSynth**: Interactive audio visualizer & Web Audio API synthesizer built in Next.js."
+      "answer": "I have built 3 major AI projects:\n1. 🌿 **EcoMatch**: AI-Powered Waste Exchange Platform using 4 autonomous LangGraph agents and FastAPI.\n2. 🧠 **ASIE**: Adaptive Skill Intelligence Engine for future skill forecasting using XGBoost, Prophet, spaCy NLP, and SHAP.\n3. 🎙️ **AI Sales Voice Agent**: Hallucination-Controlled Conversational AI with real-time speech pipeline, catalog guardrails, and conversation memory."
     },
     {
       "id": "stats.leetcode",
@@ -118,7 +118,7 @@
         "Tell me about your certificates",
         "Certifications kya hai?"
       ],
-      "answer": "My key certifications include:\n• **Machine Learning Specialization** (Coursera / DeepLearning.AI)\n• **Deep Learning & Neural Networks**\n• **Python for Data Science & AI** (IBM / Coursera)\n• **Full-Stack Web Development**\n• **Data Structures & Algorithms in C++**"
+      "answer": "My key certifications include:\n• 🏆 **Power BI for Beginner** (Simplilearn, 2025)\n• 🏆 **Machine Learning with Python** (IBM, 2025)\n• 🏆 **Generative AI** (OutSkills, 2025)\n• 🏆 **HackKrmu- Hackathon 5.0** (K.R. Mangalam University, 2026)\n• 🏆 **Full Stack with AI Integration & Problem Solving** (Programming Pathshala, 2026)"
     },
     {
       "id": "goals.hiring",

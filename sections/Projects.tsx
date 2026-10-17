@@ -25,16 +25,18 @@ export default function Projects() {
   const filteredProjects = portfolioData.projects.filter((p) => {
     if (filter === "all") return true;
     if (filter === "ai-ml") {
-      return p.techStack.some((t) => ["LangGraph", "FastAPI", "Python", "TensorFlow", "Qdrant"].includes(t));
+      return p.techStack.some((t) => ["LangGraph", "FastAPI", "Python", "TensorFlow", "Qdrant", "LLM", "Speech-to-Text", "XGBoost", "spaCy"].includes(t));
     }
     if (filter === "frontend") {
       return p.techStack.some((t) => ["React", "Next.js", "Tailwind CSS", "GLSL Shaders"].includes(t));
     }
     if (filter === "backend") {
-      return p.techStack.some((t) => ["FastAPI", "PostgreSQL", "Node.js", "Docker"].includes(t));
+      return p.techStack.some((t) => ["FastAPI", "PostgreSQL", "Node.js", "Docker", "SQLite"].includes(t));
     }
     if (filter === "full-stack") {
-      return p.techStack.includes("Next.js") && p.techStack.includes("PostgreSQL") || p.techStack.includes("LangGraph");
+      return (p.techStack.includes("Next.js") && p.techStack.includes("PostgreSQL")) || 
+             (p.techStack.includes("FastAPI") && p.techStack.includes("React")) ||
+             p.techStack.includes("LangGraph");
     }
     return true;
   });

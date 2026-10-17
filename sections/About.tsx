@@ -110,35 +110,56 @@ export default function About() {
         
         <div className="space-y-4 border-l border-zinc-800 ml-3.5 pl-6 relative">
           
-          {/* Milestone 1 */}
-          <div className="relative">
-            {/* Timeline Dot */}
-            <span className="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-primary border-4 border-background ring-4 ring-primary/20" />
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-zinc-500 flex items-center gap-1.5">
-                <Calendar className="w-3 h-3" />
-                2020 - 2024
-              </span>
-              <h4 className="text-xs font-bold text-zinc-100 uppercase">Bachelor of Engineering – Computer Engineering</h4>
-              <p className="text-xs text-zinc-400">Savitribai Phule Pune University (SPPU)</p>
-              <p className="text-[11px] text-zinc-500">Graduated with first-class honors. Focused on Distributed Systems, Web Architectures, and Neural Networks.</p>
-            </div>
-          </div>
+          {/* Dynamic Education Items */}
+          {portfolioData.education.map((edu, idx) => {
+            const isLatest = idx === portfolioData.education.length - 1;
+            return (
+              <div key={edu.company} className="relative">
+                <span className={`absolute -left-[30px] top-1.5 w-2 h-2 rounded-full border-4 border-background ring-4 ${
+                  isLatest 
+                    ? "bg-primary ring-primary/20" 
+                    : "bg-zinc-600 ring-zinc-600/20"
+                }`} />
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-zinc-500 flex items-center gap-1.5">
+                    <Calendar className="w-3 h-3" />
+                    {edu.duration}
+                  </span>
+                  <h4 className="text-xs font-bold text-zinc-100 uppercase">{edu.position}</h4>
+                  <p className="text-xs text-zinc-400">{edu.company}</p>
+                  <p className="text-[11px] text-zinc-500">{edu.workDone.join(" ")}</p>
+                </div>
+              </div>
+            );
+          })}
 
-          {/* Milestone 2 */}
-          <div className="relative">
-            {/* Timeline Dot */}
-            <span className="absolute -left-[30px] top-1.5 w-2 h-2 rounded-full bg-secondary border-4 border-background ring-4 ring-secondary/20" />
-            <div className="space-y-1">
-              <span className="text-[10px] font-mono text-zinc-500 flex items-center gap-1.5">
-                <Calendar className="w-3 h-3" />
-                2024 - 2025
-              </span>
-              <h4 className="text-xs font-bold text-zinc-100 uppercase">RAG Pipelines & Vector Databases Architecting</h4>
-              <p className="text-xs text-zinc-400">Vercel & DeepLearning.AI Academy</p>
-              <p className="text-[11px] text-zinc-500">Obtained certificates in cloud deployments. Specialized in creating semantic caching structures and multi-agent pipelines.</p>
-            </div>
-          </div>
+          {/* Dynamic Milestone Items */}
+          {portfolioData.milestones.map((milestone) => {
+            const colorMap: Record<string, string> = {
+              primary: "bg-primary ring-primary/20 text-primary",
+              secondary: "bg-secondary ring-secondary/20 text-secondary",
+              emerald: "bg-emerald-500 ring-emerald-500/20 text-emerald-500",
+              amber: "bg-amber-500 ring-amber-500/20 text-amber-500",
+            };
+            const colors = colorMap[milestone.color] || colorMap.primary;
+            const [bgColor, ringColor, textColor] = colors.split(" ");
+            return (
+              <div key={milestone.title} className="relative">
+                <span className={`absolute -left-[30px] top-1.5 w-2 h-2 rounded-full border-4 border-background ring-4 ${bgColor} ${ringColor}`} />
+                <div className="space-y-1">
+                  <span className="text-[10px] font-mono text-zinc-500 flex items-center gap-1.5">
+                    <Calendar className="w-3 h-3" />
+                    {milestone.duration}
+                  </span>
+                  <h4 className="text-xs font-bold text-zinc-100 uppercase flex items-center gap-2">
+                    <Award className={`w-3.5 h-3.5 ${textColor}`} /> {milestone.title}
+                  </h4>
+                  <p className="text-xs text-zinc-400">{milestone.organization}</p>
+                  <p className="text-[11px] text-zinc-500">{milestone.description}</p>
+                </div>
+              </div>
+            );
+          })}
 
         </div>
       </div>
